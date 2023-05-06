@@ -1,0 +1,165 @@
+% !TeX root ="MATH 366 FP Root File".tex
+\newpage
+%----------------------------------------------------------------------------------------
+%	Title
+%----------------------------------------------------------------------------------------
+\title{\underline{\LARGE{\textbf{21.7 Methods for Hyperbolic PDEs.}}} \\ {\Large\itshape }} % Title and subtitle
+\maketitle % Print the title section 
+\vspace{5pt} 
+%----------------------------------------------------------------------------------------
+%	Header and Footer
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy}
+\lhead{Ch. 21.7}
+\rhead{Methods for Hyperbolic PDEs}
+%----------------------------------------------------------------------------------------
+%	Chapter Start
+%----------------------------------------------------------------------------------------
+\newline
+In this section we consider the numeric solution of problems involving hyperbolic PDEs. We explain a standard method in terms of a typical setting for the prototype of a hyperbolic PDE, the \textbf{wave equation:} \\
+%----------------------------------------------------------------------------------------
+%	Eq. (1-4)
+%----------------------------------------------------------------------------------------
+\begin{graybox}
+\begin{align}
+& u_{tt} = u_{xx} & \text{$0\leqq x \leqq 1$, $t \geqq 0$} \tag{22.1} \\
+& u(x,0) = f(x) & \text{$0\leqq x \leqq 1$, $t \geqq 0$} \tag{22.2} \\
+& u_{t}(x,0) = g(x) & \text{(Given initial velocity)} \tag{22.3} \\
+& u(0,t) = u(1,t)=0 & \text{(Boundary conditions).} \tag{22.4} 
+\end{align}
+\end{graybox}
+Note that an equation $u_{tt}=c^2u_{xx}$ and another x-interval can be reduced to the form (1) by a linear transformation of $x$ and $t$. This is similar to Sec. 21.6, Prob. 1.
+
+For instance, (1)---(4) is the model of a vibrating elastic string with fixed ends at $x=0$ and $x=1$ (see Sec. 12.2). Although an analytic solution of the problem is given in (13), Sec. 12.4, we use the problem for explaining basic ideas of the numeric approach that are also relevant for more complicated hyperbolic PDEs.
+
+Replacing the derivatives by difference quotients as before, we obtain fro (1) [see (6) in Sec. 21.4 with $y=t$]
+%----------------------------------------------------------------------------------------
+%	Eq. (5)
+%----------------------------------------------------------------------------------------
+\begin{equation}\tag{22.5}
+\frac{1}{k^2}(u_{i,j+1}-2u_{ij}+u_{i,j-1})=\frac{1}{h^2}(u_{i+1,j}-2u_{ij}+u_{i-1,j})
+\end{equation}
+where $h$ is the mesh size in $x$, and $k$ is the mesh size in $t$. This difference equation relates 5 points as shown in Fig. 470a. It suggests a rectangular grid similar to the grids for parabolic equations in the preceding section. We choose $r^{*}=k^2/h^2=1$. Then $u_{ij}$ drops out and we have \\
+%----------------------------------------------------------------------------------------
+%	Eq. (6)
+%----------------------------------------------------------------------------------------
+\begin{graybox}
+\begin{equation}\tag{22.6}
+\hspace{90pt}u_{i,j+1}=u_{i-1,j}+u_{i+1,j}-u_{i,j-1}\hspace{40pt} \text{(Fig. 470b).}
+\end{equation}
+\end{graybox}
+It can be shown that for $0<r^*\leqq 1$ the present \textbf{explicit method} is stable, so that from (6) we may expect reasonable results for initial data that have no discontinuities. (For a hyperbolic PDE the latter would propagate into the solution domain---a phenomenon that would be difficult to deal with on our present grid. For unconditionally stable \textbf{implicit methods} see [E1] in App. 1.) 
+%----------------------------------------------------------------------------------------
+%	Fig. 470.
+%----------------------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{"Figures/MATH 366 FP (470)".png}
+\caption*{\small{\textbf{\color{blue} Fig. 470.}} Mesh points used in (5) and (6)}
+\end{center}
+\end{figure}
+\newpage
+
+Equation (6) still involves 3 time steps $j-1$, $j$, $j+1$, whereas the formulas in the parabolic case involved only 2 time steps. Furthermore, we now have 2 initial conditions. So we ask how we get started and how we can use the initial condition (3). This can be done as follows.
+
+From $u_{t}(x,0)=g(x)$ we derive the difference formula
+%----------------------------------------------------------------------------------------
+%	Eq. (7)
+%----------------------------------------------------------------------------------------
+\begin{equation}\tag{22.7}
+\frac{1}{2k}(u_{i1}-u_{i,-1})=g_{i}, \hspace{10pt} \text{hence} \hspace{10pt} u_{i,-1}=u_{i1}-2kg_{i}
+\end{equation}
+where $g_{i}=g(ih).$ For $t=0$, that is $j=0,$ equation (6) is
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+u_{i1}=u_{i-1,0}+u_{i+1,0}-u_{i,-1}.
+\end{equation*}
+Into this we substitute $u_{i,-1}$ as given in (7). We obtain $u_{i1}=u_{i-1,0}+u_{i+1,0}-u_{i1}+2kg_{i}$ and by simplification \\
+%----------------------------------------------------------------------------------------
+%	Eq. (8)
+%----------------------------------------------------------------------------------------
+\begin{graybox}
+\begin{equation}\tag{22.8}
+u_{i1}=\frac{1}{2}(u_{i-1,0}+u_{i+1,0})+kg_{i}.
+\end{equation}
+\end{graybox}
+This expresses $u_{i1}$ in terms of the initial data. It is for the beginning only. Then use (6).
+%----------------------------------------------------------------------------------------
+%	Example 1 
+%----------------------------------------------------------------------------------------
+\section*{\small{{\color{blue} EXAMPLE 1:}} Vibrating String, Wave Equation}
+Apply the present method with $h=k=0.2$ to the problem (1)---(4), where
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+f(x)=\sin{\pi x}, \hspace{10pt} g(x)=0.
+\end{equation*}
+\textit{\textbf{Solution.}} The grid is the same as in Fig. 468, Sec. 21.6, except for the values of $t$, which now are 0.2, 0.4, \dots (instead of 0.04, 0.08, \dots), The initial values of $u_{00}$, $u_{10}$, \dots are the same as in Example 1, Sec. 21.6. From (8) and $g(x)=0$ we have
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+u_{i1}=\frac{1}{2}(u_{i-1,0}+u_{i+1,0}).
+\end{equation*} 
+From this we compute, using $u_{10}=u_{40}=\sin{0.2\pi}=0.587785$, $u_{20}=u_{30}=0.951057$,
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{split}
+(i=1)\hspace{10pt}u_{11}=\frac{1}{2}(u_{00}+u_{20})=\frac{1}{2}\cdot 0.951057=0.475528 \\
+(i=2)\hspace{10pt}u_{21}=\frac{1}{2}(u_{10}+u_{30})=\frac{1}{2}\cdot 1.538842=0.769421
+\end{split}
+\end{equation*}
+and $u_{31}=u_{21}$, $u_{41}=u_{11}$ by symmetry as in Sec. 21.6, Example 1. From (6) with $j=1$ we now compute, using $u_{01}=u_{02}=\dots=0$, 
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{split}
+(i=1)\hspace{10pt}u_{12}=u_{01}+u_{21}-u_{10}=0.769421-0.587785 \hspace{52pt} = 0.181636 \\
+(i=2)\hspace{10pt}u_{22}=u_{11}+u_{31}-u_{20}=0.475528+0.769421-0.951057=0.293892,
+\end{split}
+\end{equation*}
+and $u_{32}=u_{22}$, $u_{42}=u_{12}$ by symmetry; and so on. We thus obtain the following values of the displacement $u(x,t)$ of the string over the first half-cycle:%----------------------------------------------------------------------------------------
+%	Table 1 
+%----------------------------------------------------------------------------------------
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c c c c c c c|}
+\hline t & $x=0$ & $x=0.2$ & $x=0.4$ & $x=0.6$ & $x=0.8$ & $x=1$ \\ \hline
+0.0 & 0 & 0.588 & 0.951 & 0.951 & 0.588 & 0 \\
+0.2 & 0 & 0.476 & 0.769 & 0.769 & 0.476 & 0 \\
+0.4 & 0 & 0.182 & 0.294 & 0.294 & 0.182 & 0 \\
+0.6 & 0 & -0.182 & -0.294 & -0.294 & -0.182 & 0 \\
+0.8 & 0 & -0.476 & -0.769 & -0.769 & -0.476 & 0 \\
+1.0 & 0 & -0.588 & -0.951 & -0.951 & -0.588 & 0 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}%
+\newline
+These values are exact to 3D (3 decimals), the exact solution of the problem being (see Sec. 12.3)
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+u(x,t)=\sin{\pi x} \hspace{1pt} \cos{\pi t}.
+\end{equation*}
+The reason for the exactness follows from d'Alembert's solution (4), Sec. 12.4. (See Prob. 4, below.) 
+
+The following Figure is the exact solution for Example 1. \newline
+%----------------------------------------------------------------------------------------
+%	Fig.
+%----------------------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{"Figures/MATH 366 FP MATLAB 21_7 Figure".png}
+\caption*{Exact solution for Example 1. The script for this program can once again be found in the, ``MATLAB Appendix''.}
+\end{center}
+\end{figure}
+\ebox
+\newpage
+This is the end of Chap. 21 on numerics for ODEs and PDEs, a field that continues to develop rapidly in both applications and theoretical research. Much of the activity in the field is due to the computer serving as an invaluable tool for solving large-scale and complicated practical problems as well as for testing and experimenting with innovative ideas. These ideas could be small or major improvements on existing numeric algorithms or testing new algorithms as ell as other ideas.

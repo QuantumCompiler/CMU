@@ -1,0 +1,51 @@
+%---------------------------------------------------------------------------
+%	Packages
+%---------------------------------------------------------------------------
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float} 
+\usepackage{amsmath,color,graphicx}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{paralist}
+\usepackage{multicol}
+\usepackage{mathpazo}
+\usepackage{subfig}
+\usepackage{mdwlist}
+\usepackage{fancyhdr}
+%---------------------------------------------------------------------------
+%	New Commands
+%---------------------------------------------------------------------------
+% New Line Command %
+\newcommand{\n}{\newline}  
+% Square box command %
+\newcommand{\ebox}{\begin{flushright} $\Box$ \end{flushright}}
+%---------------------------------------------------------------------------
+%	New Enviroments
+%---------------------------------------------------------------------------
+% Theorem enviroment %
+\theoremstyle{definition} \newtheorem{ex}{Example}[section]
+% Gray box enviroment % 
+\definecolor{MyGray}{rgb}{0.300,0.800,1.000}
+\makeatletter\newenvironment{graybox}{%
+   \begin{lrbox}{\@tempboxa}\begin{minipage}{\columnwidth}}{\end{minipage}\end{lrbox}%
+   \colorbox{MyGray}{\usebox{\@tempboxa}}}
+%---------------------------------------------------------------------------
+%	Document Start
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+%	Separate Tex Files
+%---------------------------------------------------------------------------
+\input{TF-Section/MATH_366_FP_Title.tex}
+\input{TF-Section/MATH_366_FP_(Ch_21.6).tex}
+\input{TF-Section/MATH_366_FP_(Ch_21.7).tex}
+\input{TF-Section/MATH_366_FP_MATLAB_Appendix.tex}
+\end{document}
+
