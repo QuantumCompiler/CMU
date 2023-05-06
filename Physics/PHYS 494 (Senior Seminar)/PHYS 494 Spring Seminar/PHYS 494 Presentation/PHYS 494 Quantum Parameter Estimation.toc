@@ -1,0 +1,19 @@
+\beamer@sectionintoc {1}{What is Quantum Estimation?}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{\relax \fontsize {6}{7}\selectfont {Spin-1/2 Particles}}{4}{0}{1}
+\beamer@sectionintoc {2}{What is Estimation?}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{\relax \fontsize {6}{7}\selectfont {Coin Toss}}{7}{0}{2}
+\beamer@sectionintoc {3}{Quantum Systems}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{\relax \fontsize {6}{7}\selectfont {Single Particle}}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{\relax \fontsize {6}{7}\selectfont {Unitary Evolution}}{12}{0}{3}
+\beamer@subsectionintoc {3}{3}{\relax \fontsize {6}{7}\selectfont {Multiple Particles}}{14}{0}{3}
+\beamer@subsectionintoc {3}{4}{\relax \fontsize {6}{7}\selectfont {Density Operators}}{17}{0}{3}
+\beamer@sectionintoc {4}{Quantum Estimation}{19}{0}{4}
+\beamer@subsectionintoc {4}{1}{\relax \fontsize {6}{7}\selectfont {QFI Definition}}{19}{0}{4}
+\beamer@subsectionintoc {4}{2}{\relax \fontsize {6}{7}\selectfont {QFI Calculation}}{20}{0}{4}
+\beamer@subsectionintoc {4}{3}{\relax \fontsize {6}{7}\selectfont {Phase Shifts}}{21}{0}{4}
+\beamer@subsectionintoc {4}{4}{\relax \fontsize {6}{7}\selectfont {Phase Flips}}{26}{0}{4}
+\beamer@subsectionintoc {4}{5}{\relax \fontsize {6}{7}\selectfont {Depolarizing Channels}}{38}{0}{4}
+\beamer@subsectionintoc {4}{6}{\relax \fontsize {6}{7}\selectfont {3 Channel Phase Flip}}{46}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{52}{0}{5}
+\beamer@sectionintoc {6}{References}{53}{0}{6}
+\beamer@sectionintoc {7}{Questions}{54}{0}{7}

@@ -1,0 +1,13 @@
+\beamer@sectionintoc {1}{Main Purpose of Project}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{\relax \fontsize {6}{7}\selectfont {Multiple Star Systems}}{4}{0}{1}
+\beamer@sectionintoc {2}{Methodology of Plotting Motion}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{\relax \fontsize {6}{7}\selectfont {F.E.D.S - Forward Euler Difference Scheme}}{6}{0}{2}
+\beamer@sectionintoc {3}{Simple 1-D Motion}{17}{0}{3}
+\beamer@sectionintoc {4}{2-Body Motion}{23}{0}{4}
+\beamer@subsectionintoc {4}{1}{\relax \fontsize {6}{7}\selectfont {Initial Force Attraction}}{26}{0}{4}
+\beamer@subsectionintoc {4}{2}{\relax \fontsize {6}{7}\selectfont {Planetary Motion}}{28}{0}{4}
+\beamer@sectionintoc {5}{3-Body Motion}{30}{0}{5}
+\beamer@subsectionintoc {5}{1}{\relax \fontsize {6}{7}\selectfont {Common Facts}}{30}{0}{5}
+\beamer@subsectionintoc {5}{2}{\relax \fontsize {6}{7}\selectfont {Plots of 3-Body Motion}}{31}{0}{5}
+\beamer@subsectionintoc {5}{3}{\relax \fontsize {6}{7}\selectfont {Stability of 3-Body Motion}}{43}{0}{5}
+\beamer@sectionintoc {6}{Conclusions}{46}{0}{6}
