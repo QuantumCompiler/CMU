@@ -1,0 +1,677 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAY 2019 19:48
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"MATH 366 FP Root File.tex"
+(./MATH 366 FP Root File.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen105
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen106
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks20
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks21
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks22
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen114
+\calc@Bdimen=\dimen115
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count104
+\calc@Cskip=\skip48
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count105
+\l_MT_multwidth_dim=\dimen116
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen117
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen118
+\l_MT_above_intertext_sep=\dimen119
+\l_MT_below_intertext_sep=\dimen120
+\l_MT_above_shortintertext_sep=\dimen121
+\l_MT_below_shortintertext_sep=\dimen122
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip50
+\thm@postskip=\skip51
+\thm@headsep=\skip52
+\dth@everypar=\toks29
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip53
+\plpartopsep=\skip54
+\plitemsep=\skip55
+\plparsep=\skip56
+\pl@lab=\toks30
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2018/04/01 v1.8r multicolumn formatting (FMi)
+\c@tracingmulticols=\count106
+\mult@box=\box30
+\multicol@leftmargin=\dimen123
+\c@unbalance=\count107
+\c@collectmore=\count108
+\doublecol@number=\count109
+\multicoltolerance=\count110
+\multicolpretolerance=\count111
+\full@width=\dimen124
+\page@free=\dimen125
+\premulticols=\dimen126
+\postmulticols=\dimen127
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box31
+\last@line=\box32
+\maxbalancingoverflow=\dimen128
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\c@columnbadness=\count112
+\c@finalcolumnbadness=\count113
+\last@try=\dimen129
+\multicolovershoot=\dimen130
+\multicolundershoot=\dimen131
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
+\mc@col@check@num=\count114
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup7
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen132
+\captionmargin@=\dimen133
+\captionwidth=\dimen134
+\caption@tempdima=\dimen135
+\caption@indent=\dimen136
+\caption@parindent=\dimen137
+\caption@hangindent=\dimen138
+)
+\c@ContinuedFloat=\count115
+Package caption Info: float package is loaded.
+)
+\c@KVtest=\count116
+\sf@farskip=\skip59
+\sf@captopadj=\dimen139
+\sf@capskip=\skip60
+\sf@nearskip=\skip61
+\c@subfigure=\count117
+\c@subfigure@save=\count118
+\c@lofdepth=\count119
+\c@subtable=\count120
+\c@subtable@save=\count121
+\c@lotdepth=\count122
+\sf@top=\skip62
+\sf@bottom=\skip63
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mdwtools/mdwlist.sty
+Package: mdwlist 1996/05/02 1.1 Various list-related things
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip64
+\f@nch@O@elh=\skip65
+\f@nch@O@erh=\skip66
+\f@nch@O@olh=\skip67
+\f@nch@O@orh=\skip68
+\f@nch@O@elf=\skip69
+\f@nch@O@erf=\skip70
+\f@nch@O@olf=\skip71
+\f@nch@O@orf=\skip72
+)
+\c@ex=\count123
+
+(./MATH 366 FP Root File.aux)
+\openout1 = `"MATH 366 FP Root File.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 42.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen140
+\scratchbox=\box56
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen141
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(./TF-Section/MATH_366_FP_Title.tex
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 7.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 7.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 7.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 7.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 7.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 7.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 7.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 7.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 7.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 7.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 7.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+) [1
+
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(./TF-Section/MATH_366_FP_(Ch_21.6).tex
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 5.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 5.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 5.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 5.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 5.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 5.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 38.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 26--60
+[][][][][][]
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 26--60
+[][][][][][]
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 26--60
+[][][][][][]
+ []
+
+[2]
+<"Figures/MATH 366 FP (465)".png, id=16, 302.12875pt x 183.68625pt>
+File: "Figures/MATH 366 FP (465)".png Graphic file (type png)
+<use "Figures/MATH 366 FP (465)".png>
+Package pdftex.def Info: "Figures/MATH 366 FP (465)".png  used on input line 68
+.
+(pdftex.def)             Requested size: 172.5pt x 104.876pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 69.
+<"Figures/MATH 366 FP (466)".png, id=18, 280.04625pt x 96.36pt>
+File: "Figures/MATH 366 FP (466)".png Graphic file (type png)
+<use "Figures/MATH 366 FP (466)".png>
+Package pdftex.def Info: "Figures/MATH 366 FP (466)".png  used on input line 77
+.
+(pdftex.def)             Requested size: 172.5pt x 59.35733pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 86.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 89.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 89.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 89.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 89.
+ [3 <./Figures/MATH 366 FP (465).png> <./Figures/MATH 366 FP (466).png>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 98--109
+[][][][][][]
+ []
+
+<"Figures/MATH 366 FP (467)".png, id=24, 282.05376pt x 78.2925pt>
+File: "Figures/MATH 366 FP (467)".png Graphic file (type png)
+<use "Figures/MATH 366 FP (467)".png>
+Package pdftex.def Info: "Figures/MATH 366 FP (467)".png  used on input line 12
+2.
+(pdftex.def)             Requested size: 172.5pt x 47.88258pt.
+<"Figures/MATH 366 FP (468)".png, id=25, 347.2975pt x 192.72pt>
+File: "Figures/MATH 366 FP (468)".png Graphic file (type png)
+<use "Figures/MATH 366 FP (468)".png>
+Package pdftex.def Info: "Figures/MATH 366 FP (468)".png  used on input line 13
+1.
+(pdftex.def)             Requested size: 172.5pt x 95.72456pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--139
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 139.
+<"Figures/MATH 366 FP Desmos IC".png, id=26, 360.34625pt x 390.45876pt>
+File: "Figures/MATH 366 FP Desmos IC".png Graphic file (type png)
+<use "Figures/MATH 366 FP Desmos IC".png>
+Package pdftex.def Info: "Figures/MATH 366 FP Desmos IC".png  used on input lin
+e 146.
+(pdftex.def)             Requested size: 207.0021pt x 224.29755pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--156
+
+ []
+
+[4 <./Figures/MATH 366 FP (467).png>]
+Underfull \vbox (badness 2103) has occurred while \output is active []
+
+ [5 <./Figures/MATH 366 FP (468).png> <./Figures/MATH 366 FP Desmos IC.png>] [6
+]
+<"Figures/MATH 366 FP (469) Custom".png, id=41, 1124.2pt x 843.15pt>
+File: "Figures/MATH 366 FP (469) Custom".png Graphic file (type png)
+<use "Figures/MATH 366 FP (469) Custom".png>
+Package pdftex.def Info: "Figures/MATH 366 FP (469) Custom".png  used on input 
+line 278.
+(pdftex.def)             Requested size: 258.75pt x 194.06194pt.
+ [7 <./Figures/MATH 366 FP (469) Custom.png (PNG copy)>] [8])
+(./TF-Section/MATH_366_FP_(Ch_21.7).tex
+Overfull \hbox (6.0pt too wide) in paragraph at lines 6--32
+[][][][][][]
+ []
+
+<"Figures/MATH 366 FP (470)".png, id=50, 304.63812pt x 114.92938pt>
+File: "Figures/MATH 366 FP (470)".png Graphic file (type png)
+<use "Figures/MATH 366 FP (470)".png>
+Package pdftex.def Info: "Figures/MATH 366 FP (470)".png  used on input line 57
+.
+(pdftex.def)             Requested size: 172.5pt x 65.08076pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 41--61
+[][][][][][]
+ []
+
+[9]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 78--92
+[][][][][][]
+ []
+
+[10 <./Figures/MATH 366 FP (470).png>]
+<"Figures/MATH 366 FP MATLAB 21_7 Figure".png, id=59, 1417.295pt x 843.15pt>
+File: "Figures/MATH 366 FP MATLAB 21_7 Figure".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 21_7 Figure".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 21_7 Figure".png  used on 
+input line 159.
+(pdftex.def)             Requested size: 258.75pt x 153.92183pt.
+ [11 <./Figures/MATH 366 FP MATLAB 21_7 Figure.png (PNG copy)>]) (./TF-Section/
+MATH_366_FP_MATLAB_Appendix.tex [12]
+<"Figures/MATH 366 FP MATLAB 21_6 Script".png, id=66, 1173.38374pt x 543.02875p
+t>
+File: "Figures/MATH 366 FP MATLAB 21_6 Script".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 21_6 Script".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 21_6 Script".png  used on 
+input line 26.
+(pdftex.def)             Requested size: 345.0pt x 159.66179pt.
+<"Figures/MATH 366 FP MATLAB 21_6 Output 1".png, id=67, 1171.37625pt x 547.0437
+5pt>
+File: "Figures/MATH 366 FP MATLAB 21_6 Output 1".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 21_6 Output 1".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 21_6 Output 1".png  used o
+n input line 37.
+(pdftex.def)             Requested size: 345.0pt x 161.11774pt.
+<"Figures/MATH 366 FP MATLAB 21_6 Output 2".png, id=68, 1168.365pt x 623.32875p
+t>
+File: "Figures/MATH 366 FP MATLAB 21_6 Output 2".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 21_6 Output 2".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 21_6 Output 2".png  used o
+n input line 48.
+(pdftex.def)             Requested size: 345.0pt x 184.0611pt.
+
+[13 <./Figures/MATH 366 FP MATLAB 21_6 Script.png> <./Figures/MATH 366 FP MATLA
+B 21_6 Output 1.png>]
+<"Figures/MATH 366 FP MATLAB 21_6 Fig 469 Script".png, id=75, 1039.885pt x 349.
+305pt>
+File: "Figures/MATH 366 FP MATLAB 21_6 Fig 469 Script".png Graphic file (type p
+ng)
+<use "Figures/MATH 366 FP MATLAB 21_6 Fig 469 Script".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 21_6 Fig 469 Script".png  
+used on input line 59.
+(pdftex.def)             Requested size: 345.0pt x 115.88394pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--64
+
+ []
+
+[14 <./Figures/MATH 366 FP MATLAB 21_6 Output 2.png> <./Figures/MATH 366 FP MAT
+LAB 21_6 Fig 469 Script.png>]
+<"Figures/MATH 366 FP MATLAB 217 Script 1".png, id=81, 1041.8925pt x 420.57124p
+t>
+File: "Figures/MATH 366 FP MATLAB 217 Script 1".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 217 Script 1".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 217 Script 1".png  used on
+ input line 71.
+(pdftex.def)             Requested size: 345.0pt x 139.26382pt.
+<"Figures/MATH 366 FP MATLAB 217 Script 2".png, id=82, 1035.87pt x 394.47375pt>
+
+File: "Figures/MATH 366 FP MATLAB 217 Script 2".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 217 Script 2".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 217 Script 2".png  used on
+ input line 81.
+(pdftex.def)             Requested size: 345.0pt x 131.38057pt.
+<"Figures/MATH 366 FP MATLAB 217 Script 3".png, id=83, 1043.9pt x 206.7725pt>
+File: "Figures/MATH 366 FP MATLAB 217 Script 3".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 217 Script 3".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 217 Script 3".png  used on
+ input line 90.
+(pdftex.def)             Requested size: 345.0pt x 68.33609pt.
+ [15 <./Figures/MATH 366 FP MATLAB 217 Script 1.png> <./Figures/MATH 366 FP MAT
+LAB 217 Script 2.png>]
+<"Figures/MATH 366 FP MATLAB 217 Output 1".png, id=89, 612.2875pt x 195.73125pt
+>
+File: "Figures/MATH 366 FP MATLAB 217 Output 1".png Graphic file (type png)
+<use "Figures/MATH 366 FP MATLAB 217 Output 1".png>
+Package pdftex.def Info: "Figures/MATH 366 FP MATLAB 217 Output 1".png  used on
+ input line 101.
+(pdftex.def)             Requested size: 345.0pt x 110.2867pt.
+) [16 <./Figures/MATH 366 FP MATLAB 217 Script 3.png> <./Figures/MATH 366 FP MA
+TLAB 217 Output 1.png>]
+(./MATH 366 FP Root File.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5025 strings out of 492649
+ 78213 string characters out of 6129622
+ 150930 words of memory out of 5000000
+ 8754 multiletter control sequences out of 15000+600000
+ 44728 words of font info for 129 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,16n,43p,1106b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on "MATH 366 FP Root File.pdf" (16 pages, 926710 bytes).
+PDF statistics:
+ 132 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+

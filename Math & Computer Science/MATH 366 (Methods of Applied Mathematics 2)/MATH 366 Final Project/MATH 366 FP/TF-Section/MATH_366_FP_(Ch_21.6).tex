@@ -1,0 +1,362 @@
+% !TeX root ="MATH 366 FP Root File".tex
+%----------------------------------------------------------------------------------------
+%	Title
+%----------------------------------------------------------------------------------------
+\title{\underline{\LARGE{\textbf{21.6 Methods for Parabolic PDEs.}}} \\ {\Large\itshape }} % Title and subtitle
+%----------------------------------------------------------------------------------------
+\maketitle 
+\vspace{5pt} 
+\newline
+%----------------------------------------------------------------------------------------
+%	Header and Footer
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy}
+\lhead{Ch. 21.6}
+\rhead{Methods for Parabolic PDEs}
+%----------------------------------------------------------------------------------------
+%	Chapter Start
+%----------------------------------------------------------------------------------------
+The last two sections concerned elliptic PDEs, ad we now turn to parabolic PDEs. Recall that the definitions of elliptic, parabolic, and hyperbolic PDE's were given in Sec. 21.4 There it was also mentioned that the general behavior of solutions differs from type to type, and so do the problems of practical interest. This reflects on numerics as follows.
+
+For all three types, one replaces the PDE by a corresponding difference equation, but for \textit{parabolic} and \textit{hperbolic} PDEs this does not automatically guarantee the \textbf{convergence} of the approximate solution to the exact solution as the mesh $h\rightarrow0$; in fact, it does not even guarantee convergence at all. For all these two types of PDEs one needs additional conditions (inequalities) to assure convergence and \textbf{stability}, the latter meaning that small perturbations in the initial data (or small errors at any time) cause only small changes at later times.
+
+In this section we explain the numeric solution of the prototype of parabolic PDEs, the one-dimensional heat equation
+\begin{equation*}\tag{c constant}
+u_{t}=c^2u_{xx}.  
+\end{equation*}
+This PDE is usually considered for x in some fixed interval, say $0\leqq x \leqq L$, and time $t\geqq0$, and one prescribes the initial temperature $u(x,0)=f(x)$ ($f$ given) and boundary conditions at $x=0$ and $x=L$ for all $t\geqq0$, for instance, $u(0,t)=0$, $u(L,t)=0$. We may assume $c=1$ and $L=1$; this can always be accomplished by a linear transformation of $x$ and $t$ (Prob. 1). Then the \textbf{heat equation} and those conditions are \\
+%----------------------------------------------------------------------------------------
+%	Equations (1-3)
+%----------------------------------------------------------------------------------------
+\begin{graybox}
+\begin{align}
+& u_t = u_{tt} \hspace{0.8in}&{0\leq x \leq L, \,\, t \geq 0}&  \tag{21.1} \\
+& u(x,0) = f(x)  \hspace{0.6in}&{\rm (Initial \, condition)}& \tag{21.2} \\
+& u(0,t) = u(1,t)= 0 \hspace{0.2in}&{\rm (Boundary \, conditions).}& \tag{21.3}
+\end{align}
+\end{graybox}
+A simple finite difference approximation of (1) is [see (6a) in Sec. 21.4; \textit{j} is the number of the \textbf{\textit{time step}}] \\
+%----------------------------------------------------------------------------------------
+%	Equation (4)
+%----------------------------------------------------------------------------------------
+\begin{graybox}
+\begin{equation} \tag{21.4}
+\frac{1}{k}(u_{i,j+1}-u_{ij})=\frac{1}{h^2}(u_{i+1,j}-2u_{ij}+u_{i-1,j}).
+\end{equation}
+\end{graybox}
+Figure 465 shows a corresponding grid and mesh points. The mesh size is \textit{h} in the x-direction and \textit{k} and the t-direction. Formula (4) involves the four points shown in Fig. 466. On the left in (4) we have used a \textit{forward} difference quotient since we have no information for negative \textit{t} at the start. From (4) we calculate $u_{i,j+1}$, which corresponds to time row $j+1$, in terms of the three other \textit{u} that correspond to time row \textit{j}. Solving (4) for $u_{i,j+1}$, we have
+%----------------------------------------------------------------------------------------
+%	Equation (5)
+%----------------------------------------------------------------------------------------
+\begin{graybox}
+\begin{equation}\tag{21.5}
+\hspace{90pt}u_{i,j+1}=(1-2r)u_{ij}+r(u_{i+1,j}+u_{i-1,j})\hspace{20pt}\ r=\frac{k}{h^2}.
+\end{equation}
+\end{graybox}
+Computations by this \textbf{explicit method} based on (5) are simple. However, if can be shown that crucial to the convergence of this method is the condition
+%----------------------------------------------------------------------------------------
+%	Equation (6)
+%----------------------------------------------------------------------------------------
+\begin{equation}\tag{21.6}
+r=\frac{k}{h^2}\leqq\frac{1}{2}.
+\end{equation}
+%----------------------------------------------------------------------------------------
+%	Fig. 465.
+%----------------------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.50\textwidth]{"Figures/MATH 366 FP (465)".png}
+\caption*{\small{\textbf{\color{blue} Fig. 465.}} Grid and mesh points corresponding to (4), (5)}
+\end{center}
+\end{figure}
+%----------------------------------------------------------------------------------------
+%	Fig. 466.
+%----------------------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{"Figures/MATH 366 FP (466)".png}
+\caption*{\small{\textbf{\color{blue} Fig. 466.}} The four points in (4) and (5)}
+\end{center}
+\end{figure}
+\newline
+That is, $u_{ij}$ should have a positive coefficient in (5) or (for $r=\frac{1}{2}$) be absent from (5). Intuitively, (6) means that we should not move too fast in the t-direction. An example is given below.
+%----------------------------------------------------------------------------------------
+%	Crank-Nicolson Method
+%----------------------------------------------------------------------------------------
+\section*{\color{blue} Crank-Nicolson Method}
+Condition (6) is a handicap in practice. Indeed, to attain sufficient accuracy, we have to choose $h$ small, which makes $k$ very small by (6). For example, if $h=0.1$, then $k\leqq0.005$. Accordingly, we should look for a more satisfactory discretization of the heat equation.
+
+A method that imposes no restriction on $r=k/h^2$ is the \textbf{Crank-Nicolson (CN) method \footnote{JOHN CRANK (1916-2006), English mathematician and physicist at Courtaulds Fundamental Research Laboratory, professor at Brunel University, England. Student of Sir WILLIAM LAWRENCE BRAGG (1890-1971), Australian British physicist, who with his father, Fir WILLIAM HENRY BRAGG (1862-1942) won the Nobel Prize in physics in 1915 for their fundamental work in X-ray crystallography. (This is the only case where a father and a son shared the Nobel Prize for the same research. Furthermore, W.L, Bragg is the youngest Nobel laureate ever.) PHYLLIS NICOLSON (1917-1968), English mathematician, professor at the University of Leeds, England.}}, which uses values of $u$ at the six points in Fig. 467. The idea of the method is the replacement of the difference quotient on the right side of (4) by $\frac{1}{2}$ times the sum of two such difference quotients at two time rows (see Fig. 467). Instead of (4) we then have
+%----------------------------------------------------------------------------------------
+%	Eq. (7)
+%----------------------------------------------------------------------------------------
+\begin{equation}\tag{21.7}
+\begin{split}
+\frac{1}{k}(u_{i,j+1}-u_{ij})&=\frac{1}{2h^2}(u_{i+1,j}-2u_{ij}+u_{i-1,j}) \\&
++\frac{1}{2h^2}(u_{i+1,j+1}-2u_{i,j+1}+u_{i-1,j+1}). \\&
+\end{split}
+\end{equation}
+Multiplying by $2k$ and writing $r=k/h^2$ as before, we collect the terms corresponding to time row $j+1$ on the left and the terms corresponding to time row $j$ on the right: \\
+%----------------------------------------------------------------------------------------
+%	Eq. (8)
+%----------------------------------------------------------------------------------------
+\begin{graybox}
+\begin{equation}\tag{21.8}
+(2+2r)u_{i,j+1}-r(u_{i+1,j+1}+u_{i-1,j+1})=(2-2r)u_{ij}+r(u_{i+1,j}+u_{i-1,j}).
+\end{equation}
+\end{graybox}
+How do we use (8)? In general, the three values on the left are unknown, whereas the three values on the right are known. If we divide the x-interval $0\leqq x \leqq 1$ in (1) into $n$ equals intervals, we have $n-1$ internal mesh points per time row (see Fig. 465, where $n=4$). Then for $j=0$ and $i=1,\dots,n-1$, formula (8) gives a linear system of $n-1$ equations for the $n-1$ unknown values $u_{11},u_{21},\dots,u_{n-1,1}$ in the first time row in terms of the initial values $u_{00},u_{10},\dots,u_{n0}$ and the boundary values $u_{01}(=0),u_{n1}(=0)$. Similarly for $j=1,j=2$, and so on; that is, for each time row we have to solve such a linear system of $n-1$ equations resulting from (8).
+
+Although $r=k/h^2$ is no longer restricted, smaller $r$ will still give better results. In practice, one chooses a $k$ by which one can save a considerable amount of work, without making $r$ too large. For instance, often a good choice is $r=1$ (which would be impossible in the previous method). Then (8) becomes simply
+%----------------------------------------------------------------------------------------
+%	Eq. (9)
+%---------------------------------------------------------------------------------------- 
+\begin{equation}\tag{21.9}
+4u_{i,j+1}-u_{i+1,j+1}-u_{i-1,j+1}=u_{i+1,j}+u_{i-1,j}.
+\end{equation}
+%----------------------------------------------------------------------------------------
+%	Fig. 467
+%---------------------------------------------------------------------------------------- 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{"Figures/MATH 366 FP (467)".png}
+\caption*{\small{\textbf{\color{blue} Fig. 467.}} The six points in the Crank-Nicolson formulas (7) and (8)}
+\end{center}
+\end{figure}
+%----------------------------------------------------------------------------------------
+%	Fig. 468
+%----------------------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{"Figures/MATH 366 FP (468)".png}
+\caption*{\small{\textbf{\color{blue} Fig. 468.}} Grid in Example 1}
+\end{center}
+\end{figure}
+\newline
+%----------------------------------------------------------------------------------------
+%	Example 1
+%----------------------------------------------------------------------------------------
+\subsection*{\small{\textbf{\color{blue} Example 1:}} \textbf{Temperature in a Metal Bar. Crank-Nicolson Method, Explicit Method}}
+Consider a laterally insulated metal bar of length 1 and such that $c^2=1$ in the heat equation. Suppose that the ends of the bar are kept at temperature $u=0^{o}C$ and the temperature in the bar at some instant --- call it $t=0$ --- is $f(x)=\sin{\pi x}$. Applying the Crank-Nicolson method $h=0.2$ and $r=1$, find the temperature $u(x,t)$ in the bar for $0\leqq t \leqq 0.2$. Compare the results with the exact solution. Also apply (5) with an $r$ satisfying (6), say, $r=0.25$, and with values not satisfying (6), say, $r=1$ and $r=2.5$. The initial conditions can be seen in the Figure below.
+%----------------------------------------------------------------------------------------
+%	Fig.
+%----------------------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{"Figures/MATH 366 FP Desmos IC".png}
+\caption*{\small{\textbf{\color{blue} Fig. 468a}} Initial conditions of metal bar.}
+\end{center}
+\end{figure}
+\newline
+\newline
+\textit{\textbf{Solution by Crank-Nicolson.}}\hspace{10pt} Since $r=1,$ formula (8) takes the form (9). Since $h=0.2$ and $r=k/h^2=0.04.$ Hence we have to do 5 steps. Figure 468 shows the grid. We shall need the initial values
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+u_{10}=\sin{0.2\pi}=0.587785, \hspace{20pt} u_{20}=\sin{0.4\pi}=0.951057.
+\end{equation*}
+Also, $u_{30}=u_{20}$ and $u_{40}=u_{10}$. (Recall that $u_{10}$ means $u$ at $P_{10}$ in Fig. 468, etc.) In each time row in Fig. 468 there are 4 internal mesh points. Hence in each time step we would have to solve 4 equations in 4 unknowns. But since the initial temperature distribution is symmetric with respect to $x=0.5$, and $u=0$ at both ends for all $t$, we have $u_{31}=u_{21}$, $u_{41}=u_{11}$ in the first time row and similarly for the other rows. This reduce each system to 2 equations in 2 unknowns. By (9), since $u_{31}=u_{21}$ and $u_{01}=0$, for $j=0$ these equations are
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{split}
+(i=1)\hspace{60pt}4u_{11}-u_{21}=u_{00}+u_{20}=0.951057 &\\
+(i=2)\hspace{20pt}-u_{11}+4u_{21}-u_{21}=u_{10}+u_{20}=1.538842. 
+\end{split}
+\end{equation*}
+The solution is $u_{11}=0.399274$, $u_{21}=0.646039$. Similarly, for time row $j=1$ we have the system
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{split}
+(i=1)\hspace{35pt}4u_{12}-u_{22}=u_{01}+u_{21}=0.646039 &\\
+(i=2)\hspace{20pt}-u_{12}+3u_{22}=u_{11}+u_{21}=1.045313.
+\end{split}
+\end{equation*}
+We now wish to show these system of equations in matrix form.
+%----------------------------------------------------------------------------------------
+%	Matrix 1
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{bmatrix}
+4 & -1 \\ -1 & 3 
+\end{bmatrix}
+\begin{bmatrix}
+u_{11} \\ u_{21}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.951 \\ 1.538
+\end{bmatrix}
+\end{equation*}
+%----------------------------------------------------------------------------------------
+%	Matrix 2
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{bmatrix}
+4 & -1 \\ -1 & 3 
+\end{bmatrix}
+\begin{bmatrix}
+u_{12} \\ u_{22}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.646 \\ 1.045
+\end{bmatrix}
+\end{equation*}
+%----------------------------------------------------------------------------------------
+%	Matrix 3
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{bmatrix}
+4 & -1 \\ -1 & 3 
+\end{bmatrix}
+\begin{bmatrix}
+u_{13} \\ u_{23}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.438 \\ 0.710
+\end{bmatrix}
+\end{equation*}
+%----------------------------------------------------------------------------------------
+%	Matrix 4
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{bmatrix}
+4 & -1 \\ -1 & 3 
+\end{bmatrix}
+\begin{bmatrix}
+u_{14} \\ u_{24}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.298 \\ 0.481
+\end{bmatrix}
+\end{equation*}
+%----------------------------------------------------------------------------------------
+%	Matrix 5
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+\begin{bmatrix}
+4 & -1 \\ -1 & 3 
+\end{bmatrix}
+\begin{bmatrix}
+u_{15} \\ u_{25}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.202 \\ 0.329
+\end{bmatrix}
+\end{equation*}
+The solution is $u_{12}=0.271221$, $u_{22}=0.438844$, and so on. This process is repeated for all of the above matrices and the following results are given. It should be noted that $u_{11}=u_{41}$ and $u_{21}=u_{31}$ due to symmetry. This pattern repeats for all values of j. The code that was used to solve these matrices can be seen in the appendix titled, ``MATLAB Appendix''. This gives the temperature distribution (Fi.g 469):
+\newpage
+%----------------------------------------------------------------------------------------
+%	Table 1 
+%----------------------------------------------------------------------------------------
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c c c c c c c|}
+\hline t & $x=0$ & $x=0.2$ & $x=0.4$ & $x=0.6$ & $x=0.8$ & $x=1$ \\ \hline
+0.00 & 0 & 0.588 & 0.951 & 0.951 & 0.588 & 0 \\ 
+0.04 & 0 & 0.399 & 0.646 & 0.646 & 0.399 & 0 \\ 
+0.08 & 0 & 0.271 & 0.439 & 0.439 & 0.271 & 0 \\
+0.12 & 0 & 0.184 & 0.298 & 0.298 & 0.184 & 0 \\
+0.16 & 0 & 0.125 & 0.202 & 0.202 & 0.125 & 0 \\
+0.20 & 0 & 0.085 & 0.138 & 0.138 & 0.085 & 0 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}%
+%----------------------------------------------------------------------------------------
+%	Fig. 469 
+%----------------------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{"Figures/MATH 366 FP (469) Custom".png}
+\caption*{\small{\textbf{\color{blue} Fig. 469.}} Temperature distribution in the bar in Example 1. The script that was used to create this graph can be seen in the ``MATLAB Appendix''.}
+\end{center}
+\end{figure}
+\textit{\textbf{Comparison with the exact solution.}} The present problem can be solved exactly by separating variables (Sec. 12.5); the result is
+%----------------------------------------------------------------------------------------
+%	Eq. (10) 
+%----------------------------------------------------------------------------------------
+\begin{equation*}\tag{21.10}
+u(x,t)=\sin{\pi x}\hspace{2pt}e^{-\pi^2t}.
+\end{equation*}
+\textit{\textbf{Solution by the explicit method (5) with r=0.25.}} For $h=0.2$ and $r=k/h^2=0.25$ we have $k=rh^2=0.25\cdot0.04=0.01$. Hence we have to perform 4 times as many steps as with the Crank-Nicolson method! Formula (5) with $r=0.25$ is
+%----------------------------------------------------------------------------------------
+%	Eq. (11) 
+%----------------------------------------------------------------------------------------
+\begin{equation*}\tag{21.11}
+u_{i,j+1}=0.25(u_{i-1,j}+2u_{ij}+u_{i+1,j}).
+\end{equation*}
+We can again make use of the symmetry. For $j=0$ we need $u_{00}=0$, $u_{10}=0.587785$ (see p. 939), $u_{20}=u_{30}=0.951057$ and compute
+\begin{equation*}
+\begin{split}
+u_{11}=0.25(u_{00}+2u_{10}+u_{20})=0.531657 \hspace{88pt} &\\
+u_{21}=0.25(u_{10}+2u_{20}+u_{30})=0.25(u_{10}+3u_{20})=0.860239.
+\end{split}
+\end{equation*}
+Of course we can omit the boundary terms $u_{01}=0$, $u_{02}=0$, \dots from the formulas. For $j=1$ we compute
+\begin{equation*}
+\begin{split}
+u_{12}=0.25(2u_{11}+u_{21})=0.480888 &\\
+u_{22}=0.25(u_{11}+3u_{21})=0.778094 
+\end{split}
+\end{equation*}
+and so on. We have to perform 20 steps instead of the 5 CN steps, but the numeric values show that the accuracy is only about the same as that of the Crank-Nicolson values CN. The exact 3D-values follow from (10).
+%----------------------------------------------------------------------------------------
+%	Table 2 
+%----------------------------------------------------------------------------------------
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c c c c c c c|}
+\hline t & {\tiny{x=0.2}} CN & {\tiny{x=0.2}} By (11) & {\tiny{x=0.2}} Exact & {\tiny{x=0.4}} CN & {\tiny{x=0.4}} By (11) & {\tiny{x=0.4}} Exact \\ \hline
+0.04 & 0.399 & 0.393 & 0.396 & 0.646 & 0.637 & 0.641 \\
+0.08 & 0.271 & 0.263 & 0.267 & 0.439 & 0.426 & 0.432 \\
+0.12 & 0.184 & 0.176 & 0.180 & 0.298 & 0.285 & 0.291 \\
+0.16 & 0.125 & 0.118 & 0.121 & 0.202 & 0.191 & 0.196 \\
+0.20 & 0.085 & 0.079 & 0.082 & 0.138 & 0.128 & 0.132 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}%
+\newline
+\textit{\textbf{Failure of (5) with r violating (6).}} Formula (5) with $h=0.2$ and $r=1$ --- which violates (6) --- is
+%----------------------------------------------------------------------------------------
+%	Eq. 
+%----------------------------------------------------------------------------------------
+\begin{equation*}
+u_{i,j+1}=u_{i-1,j}-u_{ij}+u_{i+1,j}
+\end{equation*}
+and gives very poor values; some of these are
+%----------------------------------------------------------------------------------------
+%	Table 3 
+%----------------------------------------------------------------------------------------
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{c c c c c}
+\textit{t} & \textit{x=0.2} & Exact &\textit{x=0.4} & Exact \\
+0.04 & 0.363 & 0.396 & 0.588 & 0.641 \\
+0.12 & 0.139 & 0.180 & 0.225 & 0.291 \\
+0.20 & 0.053 & 0.082 & 0.086 & 0.132 \\
+\end{tabular}
+\end{center}
+\end{table}%
+\newline
+Formula (5) with an even larger $r=2.5$ (and $h=0.2$ as before) gives completely nonsensical results; some of these are \\
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{c c c c c}
+t & \textit{x=0.2} & Exact & \textit{x=0.4} & Exact \\
+0.1 & 0.0265 & 0.2191 & 0.0429 & 0.3545 \\
+0.3 & 0.0001 & 0.0304 & 0.0001 & 0.0492.
+\end{tabular}
+\end{center}
+\ebox
+\end{table}%
+\newpage
+
+
