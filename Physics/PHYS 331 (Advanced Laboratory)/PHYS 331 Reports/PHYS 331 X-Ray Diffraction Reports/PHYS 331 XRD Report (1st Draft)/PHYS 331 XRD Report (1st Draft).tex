@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% Packages
+\documentclass[twocolumn]{article}
+\usepackage[bottom]{footmisc}
+\usepackage[affil-it]{authblk}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\pgfplotsset{compat=1.10}
+%%%%%Figure command
+\newcommand{\fig}[1]{Figure~\ref{#1}}
+%%%%%Table command
+\newcommand{\tab}[1]{Table~\ref{#1}}
+%%%%%Equation command
+\newcommand{\eq}[1]{Equation~\ref{#1}}
+\newcommand{\tio}{TiO$_2$}
+%%%%%%%%%%%%%%%%%%%%%%%%% Document Info
+\title{\textbf{X-Ray Diffraction of Aluminosilicate Sodium Chloride}}
+\author{Taylor Larrechea\footnote{Electronic Address: \texttt{tjlarrechea@mavs.coloradomesa.edu.}} \ and Edward McClain\footnote{Electronic Address: \texttt{epmcclain@mavs.coloradomesa.edu.}} \\
+    Colorado Mesa University \\
+    Department of Physical and Environmental Sciences \\
+    1100 North Avenue \\
+    Grand Junction, CO 81501-3122}
+\date{March 25, 2019}
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%% Abstract
+\begin{abstract}
+Sodium chloride with aluminosilicate\footnote{This sodium chloride is more informally known as table salt.} is examined via X-Ray diffraction with the intention of finding the lattice spacing of the sample. The lattice spacing of the table salt sample was calculated by measuring the distance that the X-Ray deflected once it passed through the lattice structure of the table salt. The Miller indices of sodium chloride with aluminosilicate were needed in accordance with other observed quantities like the diffraction distance, diffraction angle, the wavelength of the source, and also the order of magnitude to calculate the lattice spacing \cite{WikiCrystal}. The accepted value for the lattice constant of sodium chloride is $a=5.64$ \cite{WikiLattice}.
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%% Background
+\section*{Background}
+X-Ray diffraction is primarily used in identifying unknown crystalline structures such as minerals or inorganic compounds \cite{XRDDiffrac}. The identification of unknown solids is really useful in geology, environmental science, and material science to just name a few areas \cite{XRDDiffrac}. In the context of this experiment we wish to examine the crystalline structure of a simple cubic material, sodium chloride with aluminosilicate \cite{WikiCrystal}. Figure 1 below shows what a simple cubic structure looks like in its simplest form.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 1
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report Simple Cubic".png}
+\caption{A simple cubic structure is depicted above. This structure is analogous to the sodium chloride with aluminosilicate sample that we are observing \cite{WikiCrystal}.}
+\label{Fig1}
+\end{center}
+\end{figure}
+\newline
+The side lengths in Figure 1 are all of the same length hence the simple cubic name. In this experiment X-Rays will be passed through structures similar to this where they are grains of sodium chloride with aluminosilicate at the smallest level possible.  To further understand how the lattice constant will be calculated we must understand what the diffraction of the X-Ray looks like. Figure 2 below shows the diffraction of an X-Ray that is entering a crystalline structure such as sodium chloride with aluminosilicate.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 2
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report XRD".png}
+\caption{The X-Ray diffraction inside a crystalline structure \cite{X-RayCryst}.}
+\label{Fig2}
+\end{center}
+\end{figure}
+\newline
+Figure 2 shows a distance of which the X-Rays diffract once they enter the crystalline structure. This distance is contingent upon the angle of diffraction ($\theta$ as seen in Figure 2 above), the wavelength of the light, and the order of magnitude of the wavelength of light. Namely, this distance is
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 1
+\begin{equation}\label{1}
+d=\frac{n\lambda}{2\sin{\theta}}
+\end{equation}
+which is the same distance as seen above in Figure 2. In order to calculate the lattice coefficient of sodium chloride with aluminosilicate in this experiment we need to know the Miller indices\footnote{Miller indices are usually represented in a form of (\textit{l},\textit{m},\textit{n}). The \textit{l}, \textit{m}, and \textit{n} can vary in different letters and symbols depending on the author of the report or article.} for sodium chloride with aluminosilicate. The Miller indices of a substance are the inverse of the intercepts of the of the plane of a substance with the a unit cell \cite{WikiCrystal}. To get a better understanding of what Miller indices' are Figure 3 is presented.
+%%%%%%%%%%%%%%%%%%%%%%%%%  Figure 3
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report Miller Indices".png}
+\caption{Physical representation of the numbers seen in a Miller index \cite{WikiCrystal}.}
+\label{Fig3}
+\end{center}
+\end{figure}
+\newpage
+The indices numbers come from which plane of the simple cubic is being intercepted. In the context of this experiment this intercepting phenomena will come from the X-Ray diffracting inside the simple cubic structure. After knowing the miller indices of sodium chloride with aluminosilicate we can proceed to calculating the lattice coefficient. In compliance with equation (1), the lattice coefficient is calculated via
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 2
+\begin{equation}\label{2}
+a=d\sqrt{l^2+m^2+n^2}
+\end{equation}
+where \textit{l}, \textit{m}, and \textit{n} are contingent upon the substance that is being observed \cite{X-RayCryst}. By knowing both equations (1) and (2) the only observable that needs to be recorded in this lab is the angle of deflection in equation (1). The other variables that show up in both equation (1) and (2) are known quantities or quantities that can be looked up according to the substance or light source being used.
+%%%%%%%%%%%%%%%%%%%%%%%%% Experimental
+\section*{Experimental}
+We now begin with how the deflection angle will be measured. In this experiment one Rigaku Miniflex X-Ray machine, a glass slide to hold the sodium chloride with aluminosilicate sample, and a computer was used to measure the deflection angle of the X-Rays that passed through the sodium chloride with aluminosilicate sample. The first step was to place the sodium chloride with aluminosilicate on the glass slide and then inside the Rigaku Miniflex. After the slide was inserted and other settings were selected the Rigaku Miniflex started generating X-Rays that were to be deflected through the sodium chloride with aluminosilicate sample. After the X-Ray was deflected from the sample it was collected on another side of the Rigaku Miniflex were this diffraction angle could be measured. These angles as well as the intensity of the X-Ray were recorded on the computer so that the data could further be analyzed\footnote{Data was taken from the program that recorded the diffraction angle and converted to an excel CSV file.}. 
+%%%%%%%%%%%%%%%%%%%%%%%%% Data and Results
+\section*{Data and Results}
+The sodium chloride with aluminosilicate with aluminosilicate was examined with the Rigaku Miniflex. The results for the diffraction of the X-Rays can be seen in Figure 4 below.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 4
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{"PHYS 331 XRD Report (NaCl) Plot".png}
+\caption{X-Ray diffraction of sodium chloride with aluminosilicate.}
+\label{Fig4}
+\end{center}
+\end{figure}
+\newline
+Figure 4 shows the intensity count per second versus the angle of diffraction for the sodium chloride aluminosilicate. There are seven distinct peaks from left to right that are created during this phenomena which will be used to calculate the diffraction distance and eventually the lattice coefficient. Table 1 below shows this data found in Figure 4.
+%%%%%%%%%%%%%%%%%%%%%%%%% Table 1
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline \textbf{Peak \#} & \textbf{Angle ($^{\circ}$)} & \textbf{Intensity (\#/Sec.)} \\ \hline
+	1 & $27.35\pm0.00$ & $126.74\pm4.85$ \\ \hline
+	2 & $31.39\pm0.00$ & $303.72\pm13.74$ \\ \hline
+	3 & $45.39\pm0.00$ & $654.99\pm9.58$ \\ \hline
+	4 & N/A & N/A \\ \hline
+	5 & $56.39\pm0.00$ & $471.35\pm8.17$ \\ \hline
+	6 & $65.98\pm0.00$ & $284.07\pm6.61$ \\ \hline
+	7 & $75.15\pm0.00$ & $475.87\pm8.39$ \\ \hline 
+\end{tabular}
+\caption{Data for X-Ray diffraction of sodium chloride with aluminosilicate. Peak No. 4 was not able to be analyzed due to it being too small for Fityk to analyze.}
+\end{center}
+\label{default}
+\end{table}%
+\newline
+The data seen in Table 1 above was analyzed with the use of a program called Fityk \cite{Fityk}. The intensities that are found in Table 1 were calculated in Fityk with a GaussianA tool. The GaussianA tool uses a Gaussian function\footnote{A function comprised of exponentials and with a concave quadratic function \cite{WikiGauss}.} to calculate the area under the curve to give a value for the intensity of a peak. By knowing the diffraction angle we can begin calculating the lattice coefficient of sodium chloride with aluminosilicate.
+%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography
+\newpage
+\begin{thebibliography}{6}
+\bibitem{WikiCrystal}
+Crystal Structure. Wikipedia, Wikimedia Foundation, 18 Feb. 2019, \url{en.wikipedia.org/wiki/Crystal_structure}.
+\bibitem{WikiGauss}
+Gaussian Function. Wikipedia, Wikimedia Foundation, 15 Mar. 2019, \url{en.wikipedia.org/wiki/Gaussian_function}.
+\bibitem{WikiLattice}
+Lattice Constant. Wikipedia, Wikimedia Foundation, 11 Mar. 2019, \url{en.wikipedia.org/wiki/Lattice_constant}.
+\bibitem{Fityk}
+Wojdyr, Marcin. Fityk: a General-Purpose Peak Fitting Program. Journal of Applied Crystallography, 10 Sept. 2010, \url{onlinelibrary.wiley.com/iucr/doi/10.1107/S0021889810030499}.
+\bibitem{X-RayCryst}
+X-Ray Crystallography. Wikipedia, Wikimedia Foundation, 9 Mar. 2019, \url{en.wikipedia.org/wiki/X-ray_crystallography}.
+\bibitem{XRDDiffrac}
+X-Ray Powder Diffraction (XRD). Techniques, 19 Mar. 2019, \url{serc.carleton.edu/research_educationgeochemsheets/techniques/XRD.html}.
+\end{thebibliography}
+\end{document}

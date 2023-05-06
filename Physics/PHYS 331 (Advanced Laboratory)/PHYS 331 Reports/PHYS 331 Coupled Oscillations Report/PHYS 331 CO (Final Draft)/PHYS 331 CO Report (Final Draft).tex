@@ -1,0 +1,322 @@
+%---------------------------------------------------------------------------
+%	Packages
+%---------------------------------------------------------------------------
+\documentclass[twocolumn]{article}
+\usepackage[bottom]{footmisc}
+\usepackage[affil-it]{authblk}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\pgfplotsset{compat=1.10}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usepackage{pgfplots}
+\usepackage{pgf}
+\usepackage{fancyhdr}
+\usepgfplotslibrary{units}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{units}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usetikzlibrary{arrows.meta}
+\tikzset{>=Stealth}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+%---------------------------------------------------------------------------
+%	Header and footer
+%---------------------------------------------------------------------------
+\pagestyle{fancy}
+\lhead{\small{Coupled Oscillations of Pendulums}}
+\chead{\small{T.J Larrechea}}
+\rhead{\small{Colorado Mesa University}}
+%---------------------------------------------------------------------------
+%	Title and Author
+%---------------------------------------------------------------------------
+\title{\textbf{Modeling the Equations of Motion for Coupled Pendulums}}
+\author{Taylor Larrechea\footnote{Electronic Address: \texttt{tjlarrechea@mavs.coloradomesa.edu.}} \ and Edward McClain\footnote{Electronic Address: \texttt{epmcclain@mavs.coloradomesa.edu.}} \\
+    Colorado Mesa University \\
+    Department of Physical and Environmental Sciences \\
+    1100 North Avenue \\
+    Grand Junction, CO 81501-3122}
+\date{May 15, 2019}
+%---------------------------------------------------------------------------
+%	Document
+%---------------------------------------------------------------------------
+\begin{document}
+\maketitle
+%---------------------------------------------------------------------------
+%	Abstract
+%---------------------------------------------------------------------------
+\begin{abstract}
+The dynamics of two coupled pendulums is studied with the goal of solving for the equations of motion. The equations of motion that were solved in this experiment were modeled with Lagrangian Mechanics. Numerical methods were used to solve the equations of motion derived from Lagrangians in this experiment. The numerical solutions showed that the pendulums behaved in the same manner as the data that was recorded. Both experimental data and the numerical solution show that the pendulums eventually oscillate at the same frequency but out of phase of one another.
+\end{abstract}
+%---------------------------------------------------------------------------
+%	Background
+%---------------------------------------------------------------------------
+\section*{Background}
+Oscillations are defined to be the repetitive variation of some measure of value about a central location \cite{WikiOsc}. Oscillations are prominent in a lot of areas whether it by in Newtonian Mechanics involving pendulums or in circuits when talking about alternating currents. Coupled oscillations occur when there are multiple bodies contributing to the oscillations in a system. Coupled oscillations can occur when there is a spring attached between the two bodies of mass or something similar to it. In the context of our experiment, we will have two pendulums swinging from the same piece of support suspended from the top of two thermoses which are free to move underneath. 
+
+Lagrangian Mechanics are valid for conservative systems only \cite{WikiLagrange}. Although our system is not conservative its dampening over time is small enough to where we choose to neglect it. Because of our assumption the use of Lagrangian Mechanics can be used to model the motion of the coupled oscillator system with respect to time. Lagrangian Mechanics allows us to use a system's kinetic and potential energies to derive equations of motion for a given system. Formally, the Lagrangian is defined as
+%---------------------------------------------------------------------------
+%	Eq. 1
+%---------------------------------------------------------------------------
+\begin{equation}\label{1}
+L=T-U
+\end{equation}
+where $T$ is the kinetic energy and $U$ is the potential energy \cite{WikiLagrange}. Once the the kinetic and potential energies of a system can be written, the equations of motion can be solved with \cite{WikiLagrange}
+%---------------------------------------------------------------------------
+%	Eq. 2
+%---------------------------------------------------------------------------
+\begin{equation}\label{2}
+\frac{\partial L}{\partial q_{i}}-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right)=0
+\end{equation}
+where $q_i$ and $\dot{q}_i$ are coordinates of a direction of motion in our system. In our experiment there are three different coordinates of motion $x \ \text{and} \ \dot{x}$, $\theta_1 \ \text{and} \ \dot{\theta_1}$, and $\theta_2 \ \text{and} \ \dot{\theta_2}$ where the $x$ is the horizontal position of one pendulum and $\theta_1$ and $\theta_2$ are the angular positions of each pendulum. After the acceleration equations for our coupled oscillator system are known, the position equations will be numerically solved and checked with recorded data.
+%---------------------------------------------------------------------------
+%	Experiment
+%---------------------------------------------------------------------------
+\section*{Experiment}
+The coupled oscillators were constructed using two rotary motion sensors, a platform for the pendulums to be attached to, and two thermoses for this platform to sit on. The set up for this experiment can be seen in Figure 1.
+%---------------------------------------------------------------------------
+%	Figure 1
+%---------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"Figures/PHYS 331 CO Report (Experiment Set Up)".png}
+\caption{A diagram of the coupled oscillators set up used in this experiment. Coupling is provided by the stage that is free to move back and forth on the thermoses.}
+\label{Diagram}
+\end{center}
+\end{figure}
+\newline
+Figure \ref{Diagram} gives a visual depiction of the constructed pendulum. The Lagrangian of the coupled oscillator is thus
+%---------------------------------------------------------------------------
+%	Eq. 3
+%---------------------------------------------------------------------------
+\begin{equation}\label{3}
+\begin{split}
+L&=\frac{1}{2}m_s\dot{x_{s}}^2+m_{t}\Big(\frac{\dot{x_{t}}}{2}\Big)^2+I\Big(\frac{\dot{x_t}}{r}\Big)^2+\frac{1}{2}m(\dot{x_1}^2+\dot{y_1}^2) \\&
++\frac{1}{2}(\dot{x_2}^2+\dot{y_2}^2)+mgl_{1}\cos{\theta_1}+mgl_{2}\cos{\theta_2}
+\end{split}
+\end{equation}
+where $\dot{x}$ and $\dot{y}$ are the horizontal and vertical velocity for either the stage, the thermoses, or each pendulum. The differences between all these are subscripted. $M$ is the mass of each pendulum (they are the same mass), $m_{T}$ is the mass of one thermos, $I$ is the moment of inertia for one thermos in Figure \ref{Diagram}. With substitutions and geometric relationships equation (3) becomes 
+%---------------------------------------------------------------------------
+%	Eq. 4
+%---------------------------------------------------------------------------
+\begin{equation}\label{4}
+\begin{split}
+L&=\frac{1}{2}m_{s}\dot{x_s}^2+m_{t}\Big(\frac{\dot{x_t}}{2}\Big)^2+I\Big(\frac{\dot{x_t}}{r}\Big)^2+\frac{1}{2}m\Big(2\dot{x_1}^2+ \\&
+2\dot{x_1}\dot{\theta_1}l_{1}\cos{\theta_1}+2\dot{x_1}\dot{\theta_2}l_{2}\cos{\theta_2}+2\dot{x_2}^2+2\dot{x_2}\dot{\theta_2}l_{2}\cos{\theta_2}\\& 
++2\dot{x_2}\dot{\theta_1}l_{1}\cos{\theta_1}+l_{1}^2\theta_{1}^2+l_{2}^2\theta_{2}^2\Big)+m\theta_{1}l_{1}\cos{\theta_{1}}+\\&
+m\theta_{2}l_{2}\cos{\theta_{2}}  
+\end{split}
+\end{equation}
+now giving us the equation that is necessary to use for equation (2). There are four coordinates ($x_1$, $x_2$, $\theta_{1}$, $\theta_{2}$) in equation (4) that we will have to use equation (2) on. The equation of motion for the $x_1$ direction is
+%---------------------------------------------------------------------------
+%	Eq. 5
+%---------------------------------------------------------------------------
+\begin{equation}\label{5}
+\ddot{x_1}=\frac{l(\dot{\theta_{1}^2}\sin{\theta_{1}}+\dot{\theta_{2}^2}\sin{\theta_{2}})+\frac{1}{2}g(\sin{2\theta_{1}}+\sin{2\theta_{2}})}{\alpha-(\cos^2{\theta_{1}}+\cos^2{\theta_{2}})}
+\end{equation}
+where equation (5) is the acceleration equation in the $x$ direction for one pendulum seen in Figure \ref{Diagram}. Conversely the equation of motion in the $x$ direction for the other pendulum is
+%---------------------------------------------------------------------------
+%	Eq. 6
+%---------------------------------------------------------------------------
+\begin{equation}\label{6}
+\ddot{x_2}=\frac{l(\dot{\theta_{2}^2}\sin{\theta_{2}}+\dot{\theta_{1}^2}\sin{\theta_{1}})+\frac{1}{2}g(\sin{2\theta_{2}}+\sin{2\theta_{1}})}{\alpha-(\cos^2{\theta_{1}}+\cos^2{\theta_{2}})}.
+\end{equation}
+There is a common value that appears in equation (\ref{5}) as well as (\ref{6}) and the rest of the equations of motion and that value is
+%---------------------------------------------------------------------------
+%	Eq. 7
+%---------------------------------------------------------------------------
+\begin{equation}\label{7}
+\alpha = \frac{2(I/r^2+m)}{m}+m_s+\frac{1}{2}m_t. 
+\end{equation}
+The same procedure was conducted for the $\theta_1$ direction that was used for the $x_1$ and $x_2$ coordinates
+%---------------------------------------------------------------------------
+%	Eq. 8
+%---------------------------------------------------------------------------
+\begin{equation}\label{8}
+\begin{split}
+\ddot{\theta_{1}}&=(\alpha-\cos^2{\theta_1})^{-1}\Bigg[\dot{\theta_{1}^2}\sin{\theta_{1}}\cos{\theta_{1}}+\dot{\theta_{2}^2}\sin{\theta_{2}}\cos{\theta_{2}}\\&
+-\frac{g\sin{\theta_{1}}}{l}\alpha)-\cos{\theta_{1}}\cos{\theta_{2}}+\Big(\dot{\theta_{2}^2}\sin{\theta_{2}}\sin{\theta_{2}}\\&
++\dot{\theta_{1}^2}\sin{\theta_{1}}\cos{\theta_{2}}-\frac{g\sin{\theta_{2}}}{l}\alpha\Big)/(\alpha-\cos^2{\theta_2})\Bigg]/ \\&
+\Bigg(1-\frac{\cos^2{\theta_{1}}\cos^2{\theta_{2}}}{(\alpha-\cos^2{\theta_1})(\alpha-\cos^2{\theta_2})}\Bigg).
+\end{split}
+\end{equation}
+The same procedure is used to find the acceleration equation for $\theta_{2}$ and is thus
+%---------------------------------------------------------------------------
+%	Eq. 9
+%---------------------------------------------------------------------------
+\begin{equation}\label{9}
+\begin{split}
+\ddot{\theta_{2}}&=(\alpha-\cos^2{\theta_2})^{-1}\Bigg[\dot{\theta_{2}^2}\sin{\theta_{2}}\cos{\theta_{2}}+\dot{\theta_{1}^2}\sin{\theta_{1}}\cos{\theta_{1}}\\&
+-\frac{g\sin{\theta_{2}}}{l}\alpha)-\cos{\theta_{1}}\cos{\theta_{2}}+\Big(\dot{\theta_{1}^2}\sin{\theta_{1}}\sin{\theta_{1}}\\&
++\dot{\theta_{2}^2}\sin{\theta_{2}}\cos{\theta_{1}}-\frac{g\sin{\theta_{1}}}{l}\alpha\Big)/(\alpha-\cos^2{\theta_1})\Bigg]/ \\&
+\Bigg(1-\frac{\cos^2{\theta_{1}}\cos^2{\theta_{2}}}{(\alpha-\cos^2{\theta_1})(\alpha-\cos^2{\theta_2})}\Bigg).
+\end{split}
+\end{equation}
+Equations (\ref{5}), (\ref{6}), (\ref{8}), and (\ref{9}) are second order ordinary coupled nonlinear differential equations that require numerical solutions due to their complexity. In particular, python and ODEint were used to solve the equations of motion for our system. Once equations (\ref{8}) and (\ref{9}) are solved numerically, we can compare the predictions with data that was recorded from the experiment. We wish to first report what the experimental data was before we solve our equations of motion to predict the motion of these pendulums.
+%---------------------------------------------------------------------------
+%	Data and Discussion
+%---------------------------------------------------------------------------
+\section*{Data and Discussion}
+The experimental data for the coupled oscillator when $\theta_{1}=-0.136 \ rad$ and $\theta_{2}=0.116 \ rad$ originally can be seen in Figure 2.
+%---------------------------------------------------------------------------
+%	Figure 2
+%---------------------------------------------------------------------------
+\begin{figure}[htbp]
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+    \begin{axis}[
+    	legend columns=2,
+	legend style={at={(0.5,-0.20)},anchor=north},
+        ylabel=Angle,
+        xlabel=Time,
+        x unit=Seconds, y unit=Radians,
+        xmin=60, xmax=100,
+        ymin=-0.15, ymax=0.15,]
+    \addplot[blue] table [x=time, y=angle1a data, col sep=comma]{csv/PHYS 331 CO (LR).csv};
+    \addlegendentry{$\theta_1$ \tiny{Position}}
+    \addplot[red] table [x=time, y=angle2a data, col sep=comma]{csv/PHYS 331 CO (LR).csv};
+    \addlegendentry{$\theta_2$ \tiny{Position}}
+    \end{axis}
+\end{tikzpicture}
+\caption{The positions of the two pendulums seen in Figure \ref{Diagram} when released from $\theta_1=-0.136 \ rad$ and $\theta_2=0.116 \ rad$.}
+\label{LR1}
+\end{center}
+\end{figure}
+\newline
+The amplitude of the pendulums in Figure \ref{LR1} damp out in the two minute time period that these pendulums swing. As time progresses, the amplitudes of the two pendulums eventually become equal and out of phase. The goal with our numerical solutions is to match the experimental data as well as possible and that can be achieved by knowing the correct initial conditions and all of the parameters in the experiment. The configuration in Figure \ref{LR1} occurred when $\theta_{1}=-0.136\ rad$ and when $\theta_{2}=0.116\ rad$. Using the initial conditions of the pendulums we have a solution for this specific condition as seen in Figure \ref{LR2}.
+%---------------------------------------------------------------------------
+%	Figure 3
+%---------------------------------------------------------------------------
+\begin{figure}[htb!]
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+    \begin{axis} [
+    	legend columns=2,
+	legend style={at={(0.5,-0.20)},anchor=north},
+        ylabel=Angle,
+        xlabel=Time,
+        x unit=Seconds, y unit=Radians,
+        xmin=65, xmax=75,
+        ymin=-0.15, ymax=0.15,]
+    \addplot[blue] table [x=time, y=angle1a solution, col sep=comma]{csv/PHYS 331 CO (LR).csv}; 
+    \addlegendentry{$\theta_1$ \tiny{Solution}}
+    \addplot[red] table [x=time, y=angle1a data, col sep=comma]{csv/PHYS 331 CO (LR).csv};
+    \addlegendentry{$\theta_1$ \tiny{Data}} 
+    \addplot[black] table [x=time, y=angle2a solution, col sep=comma]{csv/PHYS 331 CO (LR).csv};
+    \addlegendentry{$\theta_2$ \tiny{Solution}}
+    \addplot[green] table [x=time, y=angle2a data, col sep=comma]{csv/PHYS 331 CO (LR).csv};
+    \addlegendentry{$\theta_2$ \tiny{Data}} 
+    \end{axis}
+\end{tikzpicture}
+\caption{The position vs. time plot for the $\theta_1$ and $\theta_2$ solutions and data of each pendulum. As time progresses the two pendulums swing at the same period but out of phase. This is reminiscent of what we saw with data.}
+\label{LR2}
+\end{center}
+\end{figure}
+\newpage
+Figure \ref{LR2} depicts our first scenario in which both pendulums are being displaced from equilibrium. The next scenario occurs when only one pendulum is being displaced from equilibrium and the motion is subsequently different. This scenario occurs when $\theta_{1}=-0.0434\ rad$ and $\theta_{2}=0.0378\ rad$ for the initial locations of the pendulums. The data that came from the experiment of this can be seen in Figure \ref{CR1}.
+%---------------------------------------------------------------------------
+%	Figure 4
+%---------------------------------------------------------------------------
+\begin{figure}[htb!]
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+    \begin{axis}[
+        	legend columns=2,
+	legend style={at={(0.5,-0.20)},anchor=north},
+        ylabel=Angle,
+        xlabel=Time,
+        x unit=Seconds, y unit=Radians,
+        xmin=60, xmax=100,
+        ymin=-0.05, ymax=0.05,]
+    \addplot[blue] table [x=time, y=angle1a data, col sep=comma]{csv/PHYS 331 CO (CR).csv};
+     \addlegendentry{$\theta_1$ \tiny{Position}}
+    \addplot[red] table [x=time, y=angle2a data, col sep=comma]{csv/PHYS 331 CO (CR).csv};
+     \addlegendentry{$\theta_2$ \tiny{Position}}
+    \end{axis}
+\end{tikzpicture}
+\caption{Pendulum position versus time for $\theta_1$ at equilibrium and $\theta_2=0.0378 \ rad$ initially.}
+\label{CR1}
+\end{center}
+\end{figure}
+\newpage
+The same behavior where the two pendulums oscillate out of phase but at the same period occurs in Figure \ref{CR1}. This same behavior should be observed for our solution of this system for our solutions to be correct. The solution for when $\theta_1=-0.0434 \ rad$ and $\theta_2=0.0378 \ rad$ initially can be seen in Figure \ref{CR2}.
+%---------------------------------------------------------------------------
+%	Figure 5
+%---------------------------------------------------------------------------
+\begin{figure}[htb!]
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+    \begin{axis}[
+    	legend columns=2,
+	legend style={at={(0.5,-0.20)},anchor=north},
+        ylabel=Angle,
+        xlabel=Time,
+        x unit=Seconds, y unit=Radians,
+        xmin=50, xmax=60,
+        ymin=-0.05, ymax=0.05,]
+    \addplot[blue] table [x=time, y=angle1a solution, col sep=comma]{csv/PHYS 331 CO (CR).csv};
+    \addlegendentry{$\theta_1$ \tiny{Solution}}
+    \addplot[red] table [x=time, y=angle1a data, col sep=comma]{csv/PHYS 331 CO (CR).csv};
+    \addlegendentry{$\theta_1$ \tiny{Data}}
+    \addplot[black] table [x=time, y=angle2a solution, col sep=comma]{csv/PHYS 331 CO (CR).csv};
+    \addlegendentry{$\theta_2$ \tiny{Solution}}
+    \addplot[green] table [x=time, y=angle2a data, col sep=comma]{csv/PHYS 331 CO (CR).csv};
+    \addlegendentry{$\theta_2$ \tiny{Data}}  
+    \end{axis}
+\end{tikzpicture}
+\caption{The numerical solution for when $\theta_1=-0.0434 \ rad$ and $\theta_2=0.0378 \ rad$ initially.}
+\label{CR2}
+\end{center}
+\end{figure}
+\newpage
+It can be observed once again that the motion in Figure \ref{CR2} of these two pendulums eventually oscillate at the same period but out of phase from one another. This was a common pattern no matter the original displacement of the pendulums.
+%---------------------------------------------------------------------------
+%	Conclusion
+%---------------------------------------------------------------------------
+\section*{Conclusion}
+The equations of motion for a coupled pendulum system were first modeled with Lagrangian Mechanics and later solved with numerical methods in python. The behavior of the coupled pendulum system was not unique for different initial conditions from this experiment showing that no matter the initial displacement of the pendulums the two pendulums would eventually oscillate at the same period out of phase. The data shows that the amplitude of the oscillations eventually dampen to where at some point in time the pendulums would remain stationary. On the contrary the numerical solutions do not show any dampening in the oscillations and this is due to us assuming that our system was conservative. In reality our system had small dampening and thus that is why we neglected it in our solution process. Comparing the data with the numerical solutions shows that our solutions have behavior that is consistent with what was observed with data even with neglecting dampening in our solutions. Over time the solutions presented with the numerical methods used to solve our equations of motion showed that the pendulums always eventually swung at the same period or close to but out of phase of one another.
+%---------------------------------------------------------------------------
+%	Bibliography
+%---------------------------------------------------------------------------
+\newpage
+\begin{thebibliography}{99}
+\bibitem{WikiCoup}
+Coupling (physics). (2018, November 14). Retrieved April 17, 2019 from \url{https://en.wikipedia.org/wiki/Coupling_(physics)}.
+\bibitem{Daneshmand}
+Daneshmand, F., \& Amabili, M. (2012). Coupled oscillations of a protein microtubule immersed in cytoplasm: an orthotropic elastic shell modeling. Journal of Biological Physics, 38(3), 429–448. \url{https://doi.org/10.1007/s10867-012-9263-y}.
+\bibitem{Elsonbaty}
+Elsonbaty, A., Abdelkhalek, A., \& Elsaid, A. (2018). Dynamical Behaviors of Coupled Memristor-Based Oscillators with Identical and Different Nonlinearities. Mathematical Problems in Engineering, 1–20. \url{https://doi.org/10.1155/2018/4394058}.
+\bibitem{Jiang}
+Jiang, H., Liu, Y., Zhang, L., \& Yu, J. (2016). Anti-phase synchronization and symmetry-breaking bifurcation of impulsively coupled oscillators. Communications in Nonlinear Science and Numerical Simulation, 39, 199?208. \url{https://doi.org/10.1016/j.cnsns.2016.02.033}.
+\bibitem{Kashanko}
+Kashchenko, A. A. (2019). Multistability in a system of two coupled oscillators with delayed feedback. Journal of Differential Equations, 266(1), 562?579. \url{https://doi.org/10.1016/j.jde.2018.07.050}
+\bibitem{WikiLagrange}
+Lagrangian mechanics. (2019, March 14). Retrieved April 19, 2019, from \url{https://en.wikipedia.org/wiki/Lagrangian_mechanics}.
+\bibitem{WikiOsc}
+Oscillation. (2019, March 31). Retrieved April 17, 2019 from \url{https://en.wikipedia.org/wiki/Oscillation}.
+\bibitem{Semenov}
+Semenov, M. E., Solovyov, A. M., Popov, M. A., \& Meleshenko, P. A. (2018). Coupled inverted pendulums: stabilization problem. Archive of Applied Mechanics, 88(4), 517–524. \url{https://doi.org/10.1007/s00419-017-1323-0}.
+\bibitem{Tao}
+Tao, M. (2019). Simply improved averaging for coupled oscillators and weakly nonlinear waves. Communications in Nonlinear Science and Numerical Simulation, 71, 1?21. \url{https://doi.org/10.1016/j.cnsns.2018.11.003}
+\bibitem{Wang}
+Wang, L. (2016). Effects of initial conditions and coupling competition modes on behaviors of coupled non-identical fractional-order bistable oscillators. Canadian Journal of Physics, 94(11), 1158–1166. \url{https://doi-org.ezproxy.coloradomesa.edu/10.1139/cjp-2016-0086}.
+\bibitem{Xie}
+Xie, Y., Zhang, L., Guo, S., Dai, Q., \& Yang, J. (2019). Twisted states in nonlocally coupled phase oscillators with frequency distribution consisting of two Lorentzian distributions with the same mean frequency and different widths. PLoS ONE, 14(3), 1–12. \url{https://doi-org.ezproxy.coloradomesa.edu/10.1371/journal.pone.0213471}.
+\end{thebibliography}
+\end{document}

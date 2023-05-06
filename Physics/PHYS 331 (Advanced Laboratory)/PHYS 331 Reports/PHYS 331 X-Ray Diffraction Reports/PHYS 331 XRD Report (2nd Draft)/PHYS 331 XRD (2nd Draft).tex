@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% Packages
+\documentclass[twocolumn]{article}
+\usepackage[bottom]{footmisc}
+\usepackage[affil-it]{authblk}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\pgfplotsset{compat=1.10}
+%%%%%Figure command
+\newcommand{\fig}[1]{Figure~\ref{#1}}
+%%%%%Table command
+\newcommand{\tab}[1]{Table~\ref{#1}}
+%%%%%Equation command
+\newcommand{\eq}[1]{Equation~\ref{#1}}
+\newcommand{\tio}{TiO$_2$}
+%%%%%%%%%%%%%%%%%%%%%%%%% Document Info
+\title{\textbf{X-Ray Diffraction of Commercial Grade Table Salt and Potassium Chloride}}
+\author{Taylor Larrechea\footnote{Electronic Address: \texttt{tjlarrechea@mavs.coloradomesa.edu.}} \ and Edward McClain\footnote{Electronic Address: \texttt{epmcclain@mavs.coloradomesa.edu.}} \\
+    Colorado Mesa University \\
+    Department of Physical and Environmental Sciences \\
+    1100 North Avenue \\
+    Grand Junction, CO 81501-3122}
+\date{April 8, 2019}
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%% Abstract
+\begin{abstract}
+Table salt and potassium chloride are examined via X-Ray diffraction with the intention of finding the lattice spacing each powdered sample. The lattice spacing of the table salt and potassium chloride sample was calculated by measuring the angle of diffraction from the X-Ray that was incident on one of these samples. The experiment produced a lattice constant for table salt of $a=0.567\pm0.002$ nm. The lattice constant for potassium chloride was found to be $a=0.524\pm0.003$ nm. The accepted lattice constants for these samples are $a=0.564$ nm and $a=0.629$ nm respectively \cite{WikiLattice}.
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%% Background
+\section*{Background}
+X-Ray diffraction is primarily used in identifying unknown crystalline structures such as minerals or inorganic compounds \cite{XRDDiffrac}. The identification of unknown solids is useful in geology, environmental science, and material science \cite{Qian}. In the context of this experiment we wish to examine the crystalline structure of a simple cubic material, table salt and potassium chloride. Figure 1 below shows the simple cubic structure of table salt \cite{Ionic}.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 1
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report (NaCl) Official Structure".png}
+\caption{The simple cubic structure of table salt is depicted above. The lattice constant will tell us the length of one of these sides of the simple cubic structure above \cite{Ionic}.}
+\label{Fig1}
+\end{center}
+\end{figure}
+\newline
+The side lengths in Figure 1 are all of the same length hence the simple cubic name. Figure 2 below shows the diffraction of an X-Ray that is entering a crystalline structure such as table salt or sodium chloride.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 2
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report XRD".png}
+\caption{The X-Ray diffraction inside a crystalline structure \cite{X-RayCryst}. The distance between atom planes is \textit{d}.}
+\label{Fig2}
+\end{center}
+\end{figure}
+\newline
+Figure 2 shows the X-Ray diffraction distance once they enter a crystalline structure. This distance is contingent upon the angle of diffraction ($\theta$ as seen in Figure 2 above), the wavelength of the light $\lambda$, and the order of magnitude of the wavelength of light $n$. This distance occurs in Bragg's law and is formally
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 1
+\begin{equation}\label{1}
+2d\sin{\theta}=n\lambda
+\end{equation}
+where $d$ is the distance found in Figure 2. In order to calculate the lattice constant of sodium chloride with aluminosilicate in this experiment we need to know the Miller indices\footnote{Miller indices are usually represented in a form of (\textit{h},\textit{k},\textit{l}). The \textit{h}, \textit{k}, and \textit{l} can vary in different letters and symbols depending on the author of the report or article.} for sodium chloride with aluminosilicate. The Miller indices of a substance are the inverse of the intercepts of the of the plane of a substance with the a unit cell \cite{WikiCrystal}. To get a better understanding of what Miller indices are Figure 3 is presented below.
+%%%%%%%%%%%%%%%%%%%%%%%%%  Figure 3
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report Miller Indices".png}
+\caption{Physical representation of the numbers seen in a Miller index \cite{WikiCrystal}.}
+\label{Fig3}
+\end{center}
+\end{figure}
+\newpage
+The indices numbers come from which plane of the simple cubic is being intercepted. After knowing the miller indices of sodium chloride with aluminosilicate we can proceed to calculating the lattice constant. In compliance with equation (1), the lattice constant is calculated via
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 2
+\begin{equation}\label{2}
+a=d\sqrt{^2+k^2+l^2}
+\end{equation}
+where \textit{h}, \textit{k}, and \textit{l} are contingent upon the substance that is being observed \cite{X-RayCryst}. By knowing both equations (1) and (2) the only observable that needs to be recorded in this lab is the angle of deflection in equation (1). The wavelength of light that was used in this experiment was $\lambda=0.1544256$ nm which corresponds to the X-Ray that was used in the Rigaku Miniflex. The $d$ distance equation (1) could be calculated once $n$ was set equal to one since the $\theta$ value could be measured.
+%%%%%%%%%%%%%%%%%%%%%%%%% Experimental
+\section*{Experimental}
+X-Ray Diffraction patterns were acquired using a Rigaku Miniflex X-Ray machine, a glass slide to hold the sodium chloride with aluminosilicate sample, and a detector was used to measure the deflection angle of the X-Rays that were incident on the table salt and potassium chloride sample. The first step was to place the sample on the glass slide and then inside the Rigaku Miniflex. After the slide was inserted and other settings were selected the Rigaku Miniflex started generating X-Rays that were to be incident on the table salt and potassium chlorid sample. The detector inside the Rigaku Minflex measured the deflection angle of these X-Rays in a form of 2$\theta$. The results were then displayed on a computer where certain diffraction peaks could be identified. These peaks then had their angles of which they occurred at extracted and used to find a distance for the lattice spacing between respective atom planes in whatever sample was being observed. Once $d$ variable in equation (1) was known it could be used with the correct miller index of the respective peak to determine the lattice constant of the sample being observed.
+%%%%%%%%%%%%%%%%%%%%%%%%% Data and Results
+\section*{Data and Results}
+The Diffraction pattern of the table salt sample can be seen in Figure 4 below.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 4
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{"PHYS 331 XRD Report (NaCl) Plot".png}
+\caption{X-Ray diffraction of table salt.}
+\label{Fig4}
+\end{center}
+\end{figure}
+\newline
+Figure 4 shows the intensity versus the $2\theta$ angle of diffraction for the table salt sample. There are seven distinct peaks from left to right that are created during this phenomena which will be used to calculate the diffraction distance and eventually the lattice constant. Figure 5 below shows the Miller Indices of sodium chloride that correspond to some of the peaks that are found Figure 4 \cite{Lecture}.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 5
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{"PHYS 331 XRD Report (NaCl) Official Pattern".png}
+\caption{Miller indices of table salt.}
+\label{Fig5}
+\end{center}
+\end{figure}
+\newline
+The peaks seen in Figure 5 compare well to those seen in Figure 4. Therefore we can use the Miller indices that are found in Figure 5 with the corresponding angle of the same peak found in Figure 4. This will allow us to find a value for the lattice constant of table salt. Table 1 below shows the data found in Figure 4.
+%%%%%%%%%%%%%%%%%%%%%%%%% Table 1
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline \small{\textbf{Peak \& M.I.}} & \small{\textbf{Angle ($^{\circ}$)}} & \small{\textbf{Intensity (A.U.)}} \\ \hline
+	1 (111)& $27.35\pm0.00$ & $126.74\pm4.85$ \\ \hline
+	2 (200)& $31.39\pm0.00$ & $303.72\pm13.74$ \\ \hline
+	3 (220)& $45.39\pm0.00$ & $654.99\pm9.58$ \\ \hline
+	4 (311)& $53.80\pm0.00$ & $37.21\pm3.26$ \\ \hline
+	5 & $56.39\pm0.00$ & $471.35\pm8.17$ \\ \hline
+	6 & $65.98\pm0.00$ & $284.07\pm6.61$ \\ \hline
+	7 & $75.15\pm0.00$ & $475.87\pm8.39$ \\ \hline 
+\end{tabular}
+\caption{Data for X-Ray diffraction of table salt. The Miller Indices were unknown for peaks 5-7.}
+\end{center}
+\label{default}
+\end{table}%
+\newline
+The data seen in Table 1 above was analyzed with the use of a program called Fityk \cite{Fityk}. The intensities that are found in Table 1 were calculated in Fityk with a GaussianA tool. Now that all the variables are known in equation (1) the diffraction distance can be calculated to be used in equation (2) to find the lattice constant. Table 2 shows the results for the diffraction distance and lattice constant that can be calculated from Table 1.
+%%%%%%%%%%%%%%%%%%%%%%%%% Table 2
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline \small\textbf{{Peak}} &\small{\textbf{$d$ (nm)}} & \small{\textbf{$a$ (nm)}} \\ \hline
+	1 & 0.326 & 0.565 \\ \hline
+	2 & 0.285 & 0.570 \\ \hline
+	3 & 0.200 & 0.566 \\ \hline
+	4 & 0.171 & 0.567 \\ \hline
+\end{tabular}
+\caption{Lattice constant calculations for table salt.}
+\end{center}
+\label{default}
+\end{table}%
+\newline
+Taking an average and finding the standard deviation of the lattice constants found in Table 2, the final calculated lattice constant for table salt from this experiment is
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 3
+\begin{equation}
+a_{NaCl}=0.524\pm0.003.
+\end{equation}
+The accepted value for the lattice constant of sodium chloride is $a=0.564$ nm \cite{WikiLattice}. This reveals that our value is slightly out of range of the accepted value. The same procedure was ran for potassium chloride. The X-Ray Diffraction pattern of potassium chloride can be seen in Figure 6 below.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 6
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{"PHYS 331 XRD Report (KCl) Plot".png}
+\caption{X-Ray diffraction of potassium chloride.}
+\label{default}
+\end{center}
+\end{figure}
+\newline
+There are six distinct peaks that arise from the X-Ray Diffraction of potassium chloride. With the effort to identify the lattice constant of potassium chloride we also need to know the correct Miller index for each peak that is seen in Figure 6. Figure 7 below shows the Miller indices that correspond to the peaks found in Figure 6 \cite{Lin}.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 7
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{"PHYS 331 XRD Report (KCl) Official Pattern".png}
+\caption{Miller indices of potassium chloride.}
+\label{default}
+\end{center}
+\end{figure}
+\newline
+Using the data in Figure 6 and the Miller indices in Figure 7 Table 3 is constructed below to relay the X-Ray Diffraction for potassium chloride.
+%%%%%%%%%%%%%%%%%%%%%%%%% Table 3
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline \small{\textbf{Peak \& M.I.}} & \small{\textbf{Angle ($^{\circ}$)}} & \small{\textbf{Intensity (A.U.)}} \\ \hline
+	1 (200)& $28.89\pm0.00$ & $1847.79\pm50.55$ \\ \hline
+	2 (220)& $41.07\pm0.00$ & $730.83\pm32.23$ \\ \hline
+	3 (222)& $50.70\pm0.01$ & $151.20\pm15.98$ \\ \hline
+	4 (400)& $59.21\pm0.01$ & $356.57\pm23.45$ \\ \hline
+	5 (420)& $66.94\pm0.01$ & $572.83\pm28.94$ \\ \hline
+	6 (422)& $74.25\pm0.01$ & $275.10\pm20.96$ \\ \hline
+\end{tabular}
+\caption{Data for X-Ray diffraction of potassium chloride.}
+\end{center}
+\label{default}
+\end{table}%
+\newline
+Using equation (1) to find $d$ as well as using equation (2) to find the lattice constant $a$, Table 4 is constructed below to depict the lattice constant calculations for each respective peak found in Figure 6.
+%%%%%%%%%%%%%%%%%%%%%%%%% Table 4
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline \small\textbf{{Peak}} &\small{\textbf{$d$ (nm)}} & \small{\textbf{$a$ (nm)}} \\ \hline
+	1 & 0.309 & 0.618 \\ \hline
+	2 & 0.220 & 0.622 \\ \hline
+	3 & 0.180 & 0.624 \\ \hline
+	4 & 0.156 & 0.624 \\ \hline
+	5 & 0.140 & 0.626 \\ \hline
+	6 & 0.128 & 0.627 \\ \hline
+\end{tabular}
+\caption{Lattice constant calculations for potassium chloride.}
+\end{center}
+\label{default}
+\end{table}%
+\newpage
+Taking the averages of the lattice constants found in Table 4, our final value for the lattice constant of potassium chloride is
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 4
+\begin{equation}
+a_{KCl}=0.624\pm0.003.
+\end{equation}
+The accepted value for the lattice constant of potassium chloride is $a=0.629$ nm \cite{WikiLattice}. This once again shows that our value is outside the accepted value for the lattice constant.
+%%%%%%%%%%%%%%%%%%%%%%%%% Conclusion
+\section*{Conclusion}
+In this experiment X-Ray diffraction was used to find the lattice constant of table salt and potassium chloride. The lattice constant for table salt was calculated to be $a_{NaCl}=0.524\pm0.003$ nm where the accepted value is $a=0.564$ nm \cite{WikiLattice}. This discrepancy is largely in part due to the table salt being contaminated with aluminosilicate. Aluminosilicate is a preservative that is used in table salt. This added preservative is what causes us to not know the Miller indices of peaks 5-7 in Figure 4. The 5-7 peaks in Figure 4 belong to sodium chloride and aluminosilicate where as 1-4 are purely sodium chloride. The same procedure was conducted on potassium chloride and the lattice constant was found to be $a_{KCl}=0.624\pm0.003$ nm where the accepted value is  $a=0.629$ nm \cite{WikiLattice}. The lattice constant for potassium chloride is also outside the range of the accepted value and this is more than likely caused to impurities in the sample. It is possible that the potassium chloride sample was contaminated with something inside the laboratory when this experiment was being conducted. 
+%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography
+\newpage
+\begin{thebibliography}{12}
+\bibitem{WikiBraggs}
+Bragg's law. (2018, December 03). Retrieved April 6, 2019, from \url{https://en.wikipedia.org/wiki/Bragg's_law}.
+\bibitem{WikiCrystal}
+Crystal Structure. Wikipedia, Wikimedia Foundation, 18 Feb. 2019, \url{en.wikipedia.org/wiki/Crystal_structure}.
+\bibitem{WikiGauss}
+Gaussian Function. Wikipedia, Wikimedia Foundation, 15 Mar. 2019, \url{en.wikipedia.org/wiki/Gaussian_function}.
+\bibitem{Ionic}
+Ionic Solids. (n.d.). Retrieved from \url{http://nersp.nerdc.ufl.edu/~wsawyer/atoms/chapter4/chapter4.html}.
+\bibitem{WikiLattice}
+Lattice Constant. Wikipedia, Wikimedia Foundation, 11 Mar. 2019, \url{en.wikipedia.org/wiki/Lattice_constant}.
+\bibitem{Lecture}
+Lecture presented at Physical Methods For Characterizing Solids. (2019, April 6).
+\bibitem{Lin}
+Lin, Kuen-Song \& Mai, Yao-Jen \& Li, Shin-Rung \& Shu, Chia-Wei \& Wang, Chieh-Hung. (2012). Characterization and Hydrogen Storage of Surface-Modified Multiwalled Carbon Nanotubes for Fuel Cell Application. Journal of Nanomaterials. 2012. 10.1155/2012/939683. 
+\bibitem{Moroz}
+Moroz, E. M. (2017). Possibilities of powder X-ray diffraction methods in determining structural characteristics of carbon materials. Journal of Structural Chemistry, 58(8), 1510–1514. \url{https://doi.org/10.1134/S0022476617080054}.
+\bibitem{Fityk}
+Wojdyr, Marcin. Fityk: a General-Purpose Peak Fitting Program. Journal of Applied Crystallography, 10 Sept. 2010, \url{onlinelibrary.wiley.com/iucr/doi/10.1107/S0021889810030499}.
+\bibitem{Qian}
+Qian Zhang, Fei Qin, Jing Jing Niu, \& Xiang Wu. (2018). High-pressure investigation on prehnite: X-ray diffraction and Raman spectroscopy. High Temperatures -- High Pressures, 47(3), 213–221. Retrieved from \url{http://search.ebscohost.com/login.aspx?direct=true&db=a9h&AN=131005884&site=eds-live&scope=site}.
+\bibitem{X-RayCryst}
+X-Ray Crystallography. Wikipedia, Wikimedia Foundation, 9 Mar. 2019, \url{en.wikipedia.org/wiki/X-ray_crystallography}.
+\bibitem{XRDDiffrac}
+X-Ray Powder Diffraction (XRD). Techniques, 19 Mar. 2019, \url{serc.carleton.edu/research_educationgeochemsheets/techniques/XRD.html}.
+\end{thebibliography}
+\end{document}

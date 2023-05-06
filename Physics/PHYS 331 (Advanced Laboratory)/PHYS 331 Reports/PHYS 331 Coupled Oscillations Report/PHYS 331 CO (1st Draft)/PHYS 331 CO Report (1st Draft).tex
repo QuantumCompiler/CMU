@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% Packages
+\documentclass[twocolumn]{article}
+\usepackage[bottom]{footmisc}
+\usepackage[affil-it]{authblk}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\pgfplotsset{compat=1.10}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usepackage{pgfplots}
+\usepackage{pgf}
+\usepackage{fancyhdr}
+\usepgfplotslibrary{units}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{units}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usetikzlibrary{arrows.meta}
+\tikzset{>=Stealth}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+%%%%%%%%%%%%%%%%%%%%%%%%% Header and Footer
+\pagestyle{fancy}
+\lhead{\small{Coupled Oscillations of Pendulums}}
+\chead{\small{T.J Larrechea}}
+\rhead{\small{Colorado Mesa University}}
+%%%%%%%%%%%%%%%%%%%%%%%%% Document Info
+\title{\textbf{Modeling the Equations of Motion for a Two Pendulum Coupled Oscillator System}}
+\author{Taylor Larrechea\footnote{Electronic Address: \texttt{tjlarrechea@mavs.coloradomesa.edu.}} \ and Edward McClain\footnote{Electronic Address: \texttt{epmcclain@mavs.coloradomesa.edu.}} \\
+    Colorado Mesa University \\
+    Department of Physical and Environmental Sciences \\
+    1100 North Avenue \\
+    Grand Junction, CO 81501-3122}
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%% Document
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%% Abstract
+\begin{abstract}
+The dynamics of coupled pendulums is studied with the goal of solving for the equations of motion. Lagrangian techniques were used to derive an analytical equation of motion. The equations of motion that were derived from the Lagrangians in this lab were checked with data that was recorded. The differences between the equations that solved for the location with respect to time and the actual data were reported.
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%% Background
+\section*{Background}
+Oscillations are defined to be the repetitive variation of some measure of value about a central location \cite{WikiOsc}. Oscillations are prominent in a lot of areas whether it by in Newtonian Mechanics involving pendulums or in circuits when talking about alternating currents. Coupled oscillations, which are the types of oscillations that are important to this report, are similar to regular oscillations except for the fact that there is more than one body in the system that is contributing to the oscillations. The oscillations of one body in a two body system cause the other body to oscillate differently.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 1
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 CO Report (CO Diagram)".png}
+\caption{An example of a coupled oscillator system \cite{WikiCoup}.}
+\end{center}
+\end{figure}
+\newline
+Figure 1 shows an example of a coupled oscillator system with a spring that is connected between two masses of a pendulum. Regardless of where they are found in nature, oscillations can be studied and information can be extracted from them. In the context of this experiment, the position of a particular pendulum with respect to time is the piece of information that we wish to extract from our coupled oscillator system.
+
+The use of Lagrangian Mechanics was necessary to model the motion of the coupled oscillator system with respect to time. Lagrangian Mechanics allows us to use a systems kinetic and potential energies derive equations of motion for a given system. Formally, Lagrange's equation is
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 1
+\begin{equation}\label{1}
+L=T-U
+\end{equation}
+where $T$ is the kinetic energy and $U$ is the potential energy \cite{WikiLagrange}. Once the the kinetic and potential energies of a system can be written, the equations of motion can begin to be solved with \cite{WikiLagrange}
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 2
+\begin{equation}\label{2}
+\frac{\partial L}{\partial x_{i}}-\frac{d}{dt}(\frac{\partial L}{\partial \dot{x}}).
+\end{equation}
+The use of equations (1) and (2) were essential to finding an expression for the equations of motion of our coupled oscillator system. After the acceleration equations for our coupled oscillator system are known, the position equations will be numerically solved and checked with recorded data. It should be noted that equations (1) and (2) are only valid for conservative systems. We are therefore making the approximation that this coupled oscillator system is conservative.
+%%%%%%%%%%%%%%%%%%%%%%%%% Experiment
+\section*{Experiment}
+The materials that were needed for this experiment included two rotary motion sensors, a platform for the pendulums to be attached to, and two cylinders for this platform to sit on. The set up for this experiment looks as follows.
+%%%%%%%%%%%%%%%%%%%%%%%%% Figure 2
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.35\textwidth]{"PHYS 331 CO Report (Experiment Set Up)".png}
+\caption{The model for the coupled oscillator set up that was used in this experiment.}
+\end{center}
+\end{figure}
+\newline
+Figure 2 gives a visual depiction of what this coupled oscillator system looks like. The next task is to write out the acceleration equations for the system seen in Figure 2, this can be achieved with equations (1) and (2). The kinetic and potential energies of found in Figure 2 in the form of equation (1) are
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 3
+\begin{equation}\label{3}
+L=I\omega^2+\frac{1}{2}m(\dot{x}^2+\dot{y}^2)+mgl_{1}\cos{\theta_1}+mgl_{2}\cos{\theta_2}
+\end{equation}
+where $\dot{x}$ and $\dot{y}$ are the velocity of the stage in Figure 2. With substitutions and geometric relationships equation (3) becomes 
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 4
+\begin{equation}\label{4}
+\begin{split}
+L&=I(\frac{\dot{x}^2}{r^2})+\frac{1}{2}m(2\dot{x}^2+2\dot{x}\dot{\theta_1}l_{1}\cos{\theta_1}+ \\& 
+2\dot{x}\dot{\theta_2}l_{2}\cos{\theta_2}+l_{1}^2\theta_{1}^2+l_{2}^2\theta_{2}^2)+m\theta_{1}l_{1}\cos{\theta_{1}} \\&
++m\theta_{2}l_{2}\cos{\theta_{2}} 
+\end{split}
+\end{equation}
+now giving us the equation that is necessary to use for equation (2). There are three variables ($x$, $\theta_{1}$, $\theta_{2}$) in equation (4) that we will have to use equation (2) on. First variable that will be used in equation (2) is $x$. After using equation (2) and rearranging variables, the acceleration for $x$ is 
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 5
+\begin{equation}\label{5}
+\ddot{x}=\frac{l(\dot{\theta_{1}^2}\sin{\theta_{1}}+\dot{\theta_{2}^2}\sin{\theta_{2}})+\frac{1}{2}g(\sin{2\theta_{1}}+\sin{2\theta_{2}})}{\frac{2(\frac{I}{r^2}+m)}{m}-(\cos^2{\theta_{1}}+\cos^2{\theta_{2}})}
+\end{equation}
+where equation (5) is the acceleration equation for the stage in Figure 2. The same procedure was conducted for $\theta_{1}$ and the acceleration equation is
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 6
+\begin{equation}\label{6}
+\begin{split}
+\ddot{\theta_{1}}&=(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_1})^{-1}[\dot{\theta_{1}^2}\sin{\theta_{1}}\cos{\theta_{1}}+\\&
+\dot{\theta_{2}^2}\sin{\theta_{2}}\cos{\theta_{2}}-\frac{g\sin{\theta_{1}}}{l}(\frac{2(\frac{I}{r^2}+m)}{m})-\cos{\theta_{1}}\cos{\theta_{2}} \\&
+(\dot{\theta_{2}^2}\sin{\theta_{2}}\sin{\theta_{2}}+\dot{\theta_{1}^2}\sin{\theta_{1}}\cos{\theta_{2}}-\frac{g\sin{\theta_{2}}}{l} \\&
+(\frac{2(\frac{I}{r^2}+m)}{m})/(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_2})]/ \\&
+(1-\frac{\cos^2{\theta_{1}}\cos^2{\theta_{2}}}{(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_1})(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_2})}).
+\end{split}
+\end{equation}
+The same procedure is used to find the acceleration equation for $\theta_{2}$. The acceleration equation for $\theta_{2}$ is
+%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 7
+\begin{equation}\label{7}
+\begin{split}
+\ddot{\theta_{2}}&=(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_{2}})^{-1}[\dot{\theta_{2}^2}\sin{\theta_{2}}\cos{\theta_{2}}+\\&
+\dot{\theta_{1}^2}\sin{\theta_{1}}\cos{\theta_{1}}-\frac{g\sin{\theta_{2}}}{l}(\frac{2(\frac{I}{r^2}+m)}{m})-\cos{\theta_{2}}\cos{\theta_{1}} \\&
+(\dot{\theta_{1}^2}\sin{\theta_{1}}\sin{\theta_{1}}+\dot{\theta_{2}^2}\sin{\theta_{2}}\cos{\theta_{1}}-\frac{g\sin{\theta_{1}}}{l} \\&
+(\frac{2(\frac{I}{r^2}+m)}{m})/(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_1})]/ \\&
+(1-\frac{\cos^2{\theta_{2}}\cos^2{\theta_{1}}}{(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_2})(\frac{2(\frac{I}{r^2}+m)}{m}-\cos^2{\theta_1})}).
+\end{split}
+\end{equation}
+Equations (5), (6), and (7) require numerical solutions due to their complexity. Once equations (5), (6), and (7) are solved numerically, we can compare the predictions with data that was recorded from the experiment.
+%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography
+\newpage
+\begin{thebibliography}{99}
+\bibitem{WikiCoup}
+Coupling (physics). (2018, November 14). Retrieved April 17, 2019 from \url{https://en.wikipedia.org/wiki/Coupling_(physics)}.
+\bibitem{Daneshmand}
+Daneshmand, F., \& Amabili, M. (2012). Coupled oscillations of a protein microtubule immersed in cytoplasm: an orthotropic elastic shell modeling. Journal of Biological Physics, 38(3), 429–448. \url{https://doi.org/10.1007/s10867-012-9263-y}.
+\bibitem{Elsonbaty}
+Elsonbaty, A., Abdelkhalek, A., \& Elsaid, A. (2018). Dynamical Behaviors of Coupled Memristor-Based Oscillators with Identical and Different Nonlinearities. Mathematical Problems in Engineering, 1–20. \url{https://doi.org/10.1155/2018/4394058}.
+\bibitem{WikiLagrange}
+Lagrangian mechanics. (2019, March 14). Retrieved April 19, 2019, from \url{https://en.wikipedia.org/wiki/Lagrangian_mechanics}.
+\bibitem{WikiOsc}
+Oscillation. (2019, March 31). Retrieved April 17, 2019 from \url{https://en.wikipedia.org/wiki/Oscillation}.
+\bibitem{Semenov}
+Semenov, M. E., Solovyov, A. M., Popov, M. A., \& Meleshenko, P. A. (2018). Coupled inverted pendulums: stabilization problem. Archive of Applied Mechanics, 88(4), 517–524. \url{https://doi.org/10.1007/s00419-017-1323-0}.
+\bibitem{Wang}
+Wang, L. (2016). Effects of initial conditions and coupling competition modes on behaviors of coupled non-identical fractional-order bistable oscillators. Canadian Journal of Physics, 94(11), 1158–1166. \url{https://doi-org.ezproxy.coloradomesa.edu/10.1139/cjp-2016-0086}.
+\bibitem{Xie}
+Xie, Y., Zhang, L., Guo, S., Dai, Q., \& Yang, J. (2019). Twisted states in nonlocally coupled phase oscillators with frequency distribution consisting of two Lorentzian distributions with the same mean frequency and different widths. PLoS ONE, 14(3), 1–12. \url{https://doi-org.ezproxy.coloradomesa.edu/10.1371/journal.pone.0213471}.
+\end{thebibliography}
+\end{document}

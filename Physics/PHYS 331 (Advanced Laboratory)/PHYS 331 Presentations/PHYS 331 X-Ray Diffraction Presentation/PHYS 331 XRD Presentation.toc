@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{X-Ray Diffraction Theory}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{What is X-Ray Diffraction? How is it used?}{3}{0}{1}
+\beamer@sectionintoc {2}{Experimental Set-Up}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{How was the experiment set up?}{3}{0}{2}
+\beamer@sectionintoc {3}{Data and Discussion}{3}{0}{3}
+\beamer@subsectionintoc {3}{1}{How the data was used and what results we got.}{3}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{3}{0}{4}

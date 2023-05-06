@@ -1,0 +1,382 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[export]{adjustbox}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[XRD of NaCl \& KCl]{X-Ray Diffraction of Table Salt and Potassium Chloride} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Taylor Larrechea \& Edward McClain} % Your name
+\institute[CMU] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Colorado Mesa University \\ % Your institution for the title page
+\medskip
+\textit{tjlarrechea@mavs.coloradomesa.edu} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Presentation Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	Presentation Overview
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{X-Ray Diffraction Theory} 
+\subsection{What is X-Ray Diffraction? How is it used?} 
+\section{Experimental Set-Up}
+\subsection{How was the experiment set up?}
+\section{Data and Discussion}
+\subsection{How the data was used and what results we got.}
+\section{Conclusion}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Purpose
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Purpose}
+The purpose of this experiment is to find the lattice constant of table salt and potassium chloride.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.50\textwidth]{"PHYS 331 XRD Presentation NaCl Face Centered Cubic".png}
+\caption{Simple face centered cubic structure unit cell. Particularly this is a piece of table of table at the smallest scale.}
+\end{center}
+\end{figure}
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	X-Ray Diffraction Theory
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{X-Ray Diffraction Theory}
+Generic X-Ray Diffraction can be seen in the following Figure \cite{X-RayCryst}.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.50\textwidth]{"PHYS 331 XRD Presentation XRD".png}
+\caption{\small{X-Ray Diffraction of a lattice structure.}}
+\label{default}
+\end{center}
+\end{figure}
+The $\theta$ angle can be measured with the use of a diffractometer.
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Equipment Used
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Equipment Used}
+\begin{itemize}
+\item{Rigaku Miniflex X-Ray Diffractometer}
+\begin{figure}[!htb]
+\begin{minipage}{0.2\textwidth}
+\centering
+\includegraphics[width=1.50\textwidth]{"PHYS 331 XRD Presentation Rigaku 1".png}
+\end{minipage}\hspace{75pt}
+\begin{minipage}{0.2\textwidth}
+\centering
+\includegraphics[width=1.50\textwidth]{"PHYS 331 XRD Presentation Rigaku 2".png}
+\end{minipage}
+\end{figure}
+\item{Glass Slide}
+\item{Ethyl Alcohol}
+\item{Table salt and Potassium Chloride}
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Experimental Set-Up 1
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Experimental Set-Up}
+First the Rigaku Miniflex had to be turned on with the cooling system. A small sample of table salt or potassium chloride was put on the glass with ethyl alcohol used to keep the sample on the glass slide.
+\newline
+
+After the slide was placed inside the Rigaku Miniflex, the diffractometer started sending X-Rays that were to be incident on the sample placed inside. 
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+By knowing the angle of diffraction, Bragg's law can be used to identify the lattice spacing between atoms and eventually the lattice constant. The equation for Bragg's law is \cite{BraggsWiki}
+\begin{equation}\label{1}
+2d\sin{\theta}=n\lambda.
+\end{equation}
+The equation for how the lattice constant is calculated with the atom spacing $d$ is \cite{LatticeWiki}
+\begin{equation}\label{2}
+a=d\sqrt{h^2+k^2+l^2}.
+\end{equation}
+The \textit{h,k,l} that show up in equation (2) are known as Miller indices. These value are specific for a certain geometry.
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+To get a better understanding of what Miller indices are, the following figure can depict this \cite{MillerWiki}.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{"PHYS 331 XRD Presentation Miller Indices".png}
+\caption{Visual representation of Miller indices.}
+\label{default}
+\end{center}
+\end{figure}
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.50\textwidth]{"PHYS 331 XRD Presentation (NaCl) XRD Pattern".png}
+\caption{X-Ray diffraction pattern for table salt. The diffraction patterns are graphed against $2\theta$ because of the instrumentation set up. It was essential that $2\theta$ was measured not just $\theta$. The Miller Indices found in the pattern come from peer reviewed papers where some come from hand calculations.}
+\label{default}
+\end{center}
+\end{figure}
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+The table below depicts the data that was found in the diffraction pattern for table salt.
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline \textbf{\tiny{Peak}} & \textbf{\tiny{Diffraction Angle $2\theta$ $^{o}$}} & \textbf{\tiny{Intensity}} & \textbf{\tiny{Distance Between Planes ``d'' nm}} & \textbf{\tiny{Lattice Constant ``a'' nm}} \\ \hline
+\tiny{(111)} & \tiny{27.35} & \tiny{126.7$\pm$4.850} & \tiny{0.326} & \tiny{0.565} \\ \hline
+\tiny{(200)} & \tiny{31.39} & \tiny{303.7$\pm$13.74} & \tiny{0.285} & \tiny{0.570} \\ \hline
+\tiny{(220)} & \tiny{45.39} & \tiny{654.9$\pm$9.580} & \tiny{0.200} & \tiny{0.566} \\ \hline
+\tiny{(311)} & \tiny{53.80} & \tiny{37.2$\pm$3.26} & \tiny{0.171} & \tiny{0.567} \\ \hline
+\tiny{(222)} & \tiny{56.39} & \tiny{471.4$\pm$8.170} & \tiny{0.163} & \tiny{0.566} \\ \hline
+\tiny{(400)} & \tiny{65.98} & \tiny{284.1$\pm$6.610} & \tiny{0.142} & \tiny{0.567} \\ \hline
+\tiny{(420)} & \tiny{75.15} & \tiny{475.9$\pm$8.390} & \tiny{0.127} & \tiny{0.566} \\ \hline
+\end{tabular}
+\caption{XRD data for table salt.}
+\end{center}
+\label{default}
+\end{table}%
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+With the data found in the previous table we can report a final value for the lattice constant of table salt. Our final value for the lattice constant of table salt is
+\begin{equation}\label{3}
+a_{NaCl}=0.567(1) \ nm.
+\end{equation}
+The formal value for the lattice constant of table salt is \cite{LatticeWiki}
+\begin{equation}\label{4}
+a_{NaCl}=0.564 \ nm.
+\end{equation}
+Immediate observations show that our calculated value is not in the range of the formal value. We now wish to report the lattice constant for potassium chloride.
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.50\textwidth]{"PHYS 331 XRD Presentation (KCl) XRD Pattern".png}
+\caption{X-Ray diffraction of potassium chloride. Most of the Miller Indices were cross referenced with peer reviewed data to ensure accuracy. We once again had to calculate some of the Miller Indices by hand.}
+\end{center}
+\end{figure}
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+The data for the potassium chloride X-Ray diffraction can be seen in the table below.
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline \textbf{\tiny{Peak}} & \textbf{\tiny{Diffraction Angle $2\theta$ $^{o}$}} & \textbf{\tiny{Intensity}} & \textbf{\tiny{Distance Between Planes``d'' nm}} & \textbf{\tiny{Lattice Constant ``a'' nm}} \\ \hline
+\tiny{(200)} & \tiny{28.89} & \tiny{1847.8$\pm$50.546} & \tiny{0.309} & \tiny{0.618} \\ \hline
+\tiny{(220)} & \tiny{41.07} & \tiny{730.8$\pm$32.23} & \tiny{0.220} & \tiny{0.622} \\ \hline
+\tiny{(222)} & \tiny{50.70} & \tiny{151.2$\pm$15.98} & \tiny{0.180} & \tiny{0.624} \\ \hline
+\tiny{(400)} & \tiny{59.21} & \tiny{356.6$\pm$23.45} & \tiny{0.156} & \tiny{0.624} \\ \hline
+\tiny{(420)} & \tiny{66.94} & \tiny{572.8$\pm$28.93} & \tiny{0.140} & \tiny{0.626} \\ \hline
+\tiny{(422)} & \tiny{74.25} & \tiny{275.1$\pm$20.96} & \tiny{0.128} & \tiny{0.627} \\ \hline
+\end{tabular}
+\caption{XRD data for potassium chloride..}
+\end{center}
+\label{default}
+\end{table}%
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Data and Discussion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and Discussion}
+Paralleled to table salt, the lattice constant for potassium chloride from our experiment was finally
+\begin{equation}\label{5}
+a_{KCl}=0.624(3) \ nm.
+\end{equation}
+The formal value for the lattice constant of potassium chloride is \cite{LatticeWiki}
+\begin{equation}
+a_{KCl}=0.629 \ nm.
+\end{equation}
+We once again can see that our calculated value for the lattice constant is slightly off from the formal value.
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Conclusion
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Conclusion}
+\begin{itemize}
+\item{Calculated values are slightly off from those that were referenced.}
+\item{The main contributor to the errors in this lab were systematic. i.e the equipment we were using needed to be calibrated.}
+\item{Not every piece of salt is going to be the same size, the lattice constant should be interpreted as an average for one length of the unit cell, not an official one.}
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{References}
+\begin{thebibliography}{99} 
+\bibitem{BraggsWiki}
+Bragg's law. (2018, December 03). Retrieved from \url{https://en.wikipedia.org/wiki/Bragg's_law}.
+\bibitem{LatticeWiki}
+Lattice constant. (2019, March 28). Retrieved from \url{https://en.wikipedia.org/wiki/Lattice_constant}.
+\bibitem{MillerWiki}
+Miller index. (2019, April 03). Retrieved from \url{https://en.wikipedia.org/wiki/Miller_index}.
+\bibitem{X-RayCryst}
+X-Ray Crystallography. Wikipedia, Wikimedia Foundation, 9 Mar. 2019, \url{en.wikipedia.org/wiki/X-ray_crystallography}.
+\end{thebibliography}
+\end{frame}
+%------------------------------------------------
+
+
+\end{document} 
