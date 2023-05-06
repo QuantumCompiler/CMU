@@ -1,0 +1,597 @@
+%---------------------------------------------------------------------------
+%	Packages
+%---------------------------------------------------------------------------
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{calc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{color,graphicx,overpic}
+\usepackage{hyperref}
+\usepackage[margin=0.70in]{geometry}
+%---------------------------------------------------------------------------
+%	Document
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+%	General Equations
+%---------------------------------------------------------------------------
+\begin{center}
+\underline{\textbf{General Equations}}
+\end{center}
+\begin{multicols}{3}
+\begin{equation*}
+\hat{H}\Psi=E\Psi
+\end{equation*}
+\begin{equation*}
+i\hbar\frac{\partial \Psi}{\partial t}=\frac{-\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\Psi
+\end{equation*}
+\begin{equation*}
+i\hbar\frac{\partial \Psi}{\partial t}=\frac{-\hbar^2}{2m}\nabla^2\Psi+V\Psi
+\end{equation*}
+\begin{equation*}
+\frac{-\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\Psi=E\Psi
+\end{equation*}
+\begin{equation*}
+\frac{-\hbar^2}{2m}\nabla^2\Psi+V\Psi=E\Psi
+\end{equation*}
+\begin{equation*}
+\eta=\int_{-\infty}^{\infty} |\Psi(x,0)^{*}\Psi(x,0)|  \ dx=1
+\end{equation*}
+\begin{equation*}
+\mathcal{O}=\int_{-\infty}^{\infty}\Psi(x,0)^*\Psi(x,0) \ dx
+\end{equation*}
+\begin{equation*}
+P=\int_{a}^{b}\rho (x)  \ dx
+\end{equation*}
+\begin{equation*}
+P_n=|C_n|^2
+\end{equation*}
+\begin{equation*}
+<\hat{Q}>=\int \Psi^{*}\hat{Q}\Psi  \ dx=<\Psi|\hat{Q}\Psi>
+\end{equation*}
+\begin{equation*}
+<x>=\int_{-\infty}^{\infty}x|\Psi(x,t)|^2 \ dx
+\end{equation*}
+\begin{equation*}
+<x^2>=\int_{-\infty}^{\infty}x^2|\Psi(x,t)|^2 \ dx
+\end{equation*}
+\begin{equation*}
+<\hat{p}>=m\frac{d<x>}{dt}=-i\hbar \int \left(\Psi^{*}\frac{\partial \Psi}{\partial x}\right)\Psi \ dx
+\end{equation*}
+\begin{equation*}
+<\hat{p}^2>=\int \Psi^{*}\left(-\hbar^2\frac{\partial^2}{\partial x^2}\right)\Psi  \ dx
+\end{equation*}
+\begin{equation*}
+<\hat{Q}(x,p)>=\int \Psi^{*}Q\left(x,\frac{\hbar}{i}\frac{\partial}{\partial x}\right)\Psi  \ dx
+\end{equation*}
+\begin{equation*}
+<\hat{T}>=\left<\frac{\hat{p}^2}{2m}\right>
+\end{equation*}
+\begin{equation*}
+<\hat{Q}>=\sum_{n}q_n|c_n|^2
+\end{equation*}
+\begin{equation*}
+<j>=\frac{\sum jN(j)}{N}=\sum_{j=0}^{\infty}jP(j)
+\end{equation*}
+\begin{equation*}
+<j^2>=\sum_{j=0}^{\infty}j^2P(j)
+\end{equation*}
+\begin{equation*}
+<f(j)>=\sum_{j=0}^{\infty}f(j)P(j)
+\end{equation*}
+\begin{equation*}
+\frac{d}{dt}<\hat{Q}>=\frac{i}{\hbar}<[\hat{H},\hat{Q}]>+\left<\frac{\partial \hat{Q}}{\partial t}\right>
+\end{equation*}
+\begin{equation*}
+<H>=E
+\end{equation*}
+\begin{equation*}
+<H^2>=E^2
+\end{equation*}
+\begin{equation*}
+<H>=\sum_{n=1}^{\infty} |C_n|^2E_n
+\end{equation*}
+\begin{equation*}
+\sigma=\sqrt{<j^2>-<j>^2}
+\end{equation*}
+\begin{equation*}
+\sigma^2=<(\Delta x^2)>
+\end{equation*}
+\begin{equation*}
+p=\frac{h}{\lambda}=\frac{2\pi \hbar}{\lambda}
+\end{equation*}
+\begin{equation*}
+\sigma_x\sigma_p\geq\frac{\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\Delta t\Delta E \geq \frac{\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\sigma_{A}^{2}\sigma_{B}^{2} \geq \left(\frac{1}{2i}<[\hat{A},\hat{B}]>\right)^2
+\end{equation*}
+\begin{equation*}
+\hat{E}=i\hbar\frac{\partial \Psi}{\partial t}
+\end{equation*}
+\begin{equation*}
+\hat{p}=\frac{\hbar}{i}\frac{\partial}{\partial x}
+\end{equation*}
+\begin{equation*}
+\hat{T}=\frac{\hat{p}^2}{2m}
+\end{equation*}
+\begin{equation*}
+\hat{H}=\frac{-\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)
+\end{equation*}
+\begin{equation*}
+\phi(t)=e^{-iE_nt/\hbar}
+\end{equation*}
+\begin{equation*}
+\Psi(x,t)=\Psi(x)\phi(t)
+\end{equation*}
+\begin{equation*}
+\Psi(x,t)=\Psi(x)e^{-iE_nt/\hbar}
+\end{equation*}
+\begin{equation*}
+\Psi_n(r,t)=\Psi_n(r)e^{-iE_nt/\hbar}
+\end{equation*}
+\begin{equation*}
+\Psi(r,t)=\sum C_n\Psi_n(r)e^{-iE_nt\hbar}
+\end{equation*}
+\begin{equation*}
+\Psi(x,t)=\sum_{n=1}^{\infty}c_n\Psi_n(x)e^{-iE_nt/\hbar}
+\end{equation*}
+\begin{equation*}
+\phi(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\Psi(x,0)e^{-ikx} \ dx
+\end{equation*}
+\begin{equation*}
+\Psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{i\left(kx-\frac{\hbar k^2}{2m}t\right)} \ dk
+\end{equation*}
+\begin{equation*}
+\Psi(x,t)=\frac{\sqrt{m\alpha}}{\hbar}e^{-m\alpha|x|/\hbar^2}e^{-iEt/\hbar}
+\end{equation*}
+\begin{equation*}
+\phi(p,t)=\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}e^{-ipx/\hbar}\Psi(x,t) \ dx
+\end{equation*}
+\begin{equation*}
+\phi(x,t)=\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}e^{-ipx/\hbar}\Psi(p,t) \ dp
+\end{equation*}
+\begin{equation*}
+E_n=\frac{\hbar^2k_{n}^{2}}{2m}=\frac{n^2\pi^2\hbar^2}{2ma^2} \ \text{\tiny (I.S.W)} 
+\end{equation*}
+\begin{equation*}
+\Psi_n(x)=\sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x\right)} \ \text{\tiny (I.S.W)}
+\end{equation*}
+\begin{equation*}
+\int \Psi_{m}^{*}(x)\Psi_{n}(x)  \ dx=\delta_{mn}
+\end{equation*}
+\begin{equation*}
+C_n=\int \Psi_{n}^{*}(x)\Psi(x,0)  \ dx 
+\end{equation*}
+\begin{equation*}
+C_n=<f_n|\Psi>=\int f_n(x)^{*}\Psi(x,0)  \ dx
+\end{equation*}
+\begin{equation*}
+V(x)=\frac{1}{2}mw^2x^2 \ \text{\tiny (H.O)}
+\end{equation*}
+\begin{equation*}
+[x,p]=i\hbar
+\end{equation*}
+\begin{equation*}
+[\hat{x},\hat{p}]=i\hbar
+\end{equation*}
+\begin{equation*}
+E_n=(n+1/2)\hbar w \ \text{\tiny (H.O)}
+\end{equation*}
+\begin{equation*}
+a_{\pm}=\frac{1}{\sqrt{2\hbar mw}}(\mp ip+mwx)
+\end{equation*}
+\begin{equation*}
+a_+\Psi_n=\sqrt{n+1}\Psi_{n+1}
+\end{equation*}
+\begin{equation*}
+a_-\Psi_n=\sqrt{n}\Psi_{n-1}
+\end{equation*}
+\begin{equation*}
+(a_+)^2\Psi_n \ \propto \ \Psi_{n+2}
+\end{equation*}
+\begin{equation*}
+(a_-)^2\Psi_n \ \propto \ \Psi_{n-2}
+\end{equation*}
+\begin{equation*}
+a_+a_-\Psi_n=n\Psi_n
+\end{equation*}
+\begin{equation*}
+a_-a_+\Psi_n=(n+1)\Psi_n
+\end{equation*}
+\begin{equation*}
+a_-\Psi_0=0
+\end{equation*}
+\begin{equation*}
+\Psi_0(x)=\left(\frac{mw}{\pi \hbar}\right)^{\frac{1}{4}}e^{\frac{-mw}{2\hbar}x^2}
+\end{equation*}
+\begin{equation*}
+\Psi_n(x)=A_n(a_+)^n\Psi_0(x)
+\end{equation*}
+\begin{equation*}
+\Psi_n=\frac{(a_+)^n}{\sqrt{n!}}\Psi_0
+\end{equation*}
+\begin{equation*}
+x=\sqrt{\frac{\hbar}{2mw}}(a_++a_-)
+\end{equation*}
+\begin{equation*}
+\hat{p}=i\sqrt{\frac{\hbar mw}{2}}(a_+-a_-)
+\end{equation*}
+\begin{equation*}
+R=(1+(2\hbar^2E/m\alpha^2))^{-1}
+\end{equation*}
+\begin{equation*}
+T=(1+(m\alpha^2/2\hbar^2E))^{-1}
+\end{equation*}
+\begin{equation*}
+R=\frac{|B|^2}{|A|^2} ,\ T=\frac{|F|^2}{|A|^2}
+\end{equation*}
+\begin{equation*}
+R+T=1
+\end{equation*}
+\begin{equation*}
+|\alpha> \rightarrow a=
+\begin{pmatrix}
+a_1 \\ a_2 \\ a_3
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+<\alpha| \rightarrow a^{*}=
+\begin{pmatrix}
+a_{1}^{*} & a_{2}^{*} & a_{3}^{*}
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+\text{\tiny H.S iff} <\beta|\alpha>=<\alpha|\beta>^{*}
+\end{equation*}
+\begin{equation*}
+<\alpha|\alpha>=\int_{a}^{b}|f(x)|^2 \ dx
+\end{equation*}
+\begin{equation*}
+<f_m|f_n>=\delta_{mn}
+\end{equation*}
+\begin{equation*}
+<\hat{A}>=<\delta(0)|\hat{A}|\delta(0)>
+\end{equation*}
+\begin{equation*}
+P=|<\lambda_n|\delta(t)>|^2
+\end{equation*}
+\begin{equation*}
+|\delta(t)>=\phi(t)|\delta(0)>
+\end{equation*}
+\begin{equation*}
+|\delta(0)>=|\lambda_n>
+\end{equation*}
+\begin{equation*}
+\Psi(x,t)=<x|\delta(t)>
+\end{equation*}
+\begin{equation*}
+\phi(p,t)=<p|\delta(t)>
+\end{equation*}
+\begin{equation*}
+C_n(t)=<n|\delta(t)>
+\end{equation*}
+\begin{equation*}
+\hat{Q}_{mn}=<e_m|\hat{Q}|e_n>
+\end{equation*}
+\begin{equation*}
+i\hbar\frac{d}{dt}|\delta>=H|\delta>
+\end{equation*}
+\begin{equation*}
+\hat{H}|\delta>=E|\delta>
+\end{equation*}
+\begin{equation*}
+\hat{P}=|\alpha><\alpha|
+\end{equation*}
+\begin{equation*}
+\hat{P}|\delta>=<\alpha|\beta|\alpha>
+\end{equation*}
+\begin{equation*}
+<e_m|e_n>=\delta_{mn}
+\end{equation*}
+\begin{equation*}
+p_x=\frac{\hbar}{i}\frac{\partial}{\partial x} ,\ p_y=\frac{\hbar}{i}\frac{\partial}{\partial x} ,\ p_z=\frac{\hbar}{i}\frac{\partial}{\partial z}
+\end{equation*}
+\begin{equation*}
+p=\frac{\hbar}{i}\nabla
+\end{equation*}
+\begin{equation*}
+P_{l}(x)=\frac{1}{2^ll!}\left(\frac{d}{dx}\right)^l(x^2-1)^l
+\end{equation*}
+\begin{equation*}
+P_{l}^{m}(x)=(1-x^2)^{|m|/2}\left(\frac{d}{dx}\right)^{|m|}P_{l}(x)
+\end{equation*}
+\begin{equation*}
+\begin{split}
+Y_{l}^{m}(\theta,\phi)=&\Bigg[\epsilon\sqrt{\frac{(2l+1)}{(4\pi)}\frac{(l-|m|)!}{(l+|m|)!}} \\
+&\times e^{im\phi} \ P_{l}^{m}(\cos{\theta})\Bigg],\hspace{5pt} \epsilon=(-1)^m 
+\end{split}
+\end{equation*}
+\begin{equation*}
+j_l(x)=(-x)^l\left(\frac{1}{x}\frac{d}{dx}\right)\frac{\sin{(x)}}{x}
+\end{equation*}
+\begin{equation*}
+n_l(x)=-(-x)^l\left(\frac{1}{x}\frac{d}{dx}\right)^l\frac{\cos{(x)}}{x}
+\end{equation*}
+\begin{equation*}
+E_n=-\left[\frac{m}{2\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\right]\frac{1}{n^2}=\frac{E_1}{n^2}
+\end{equation*}
+\begin{equation*}
+\Psi_{100}(r,\theta,\phi)=\frac{e^{-r/a}}{\sqrt{\pi a^3}}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\Psi_{nlm}=&\Bigg[\sqrt{\left(\frac{2}{na}\right)^3\frac{(n-l-1)!}{2n[(n+1)!]^3}} \ e^{-r/na} \\
+&\times\Big(\frac{2r}{na}\Big)^l\left[L_{n-l-1}^{2l+1}\Big(\frac{2r}{na}\Big)\right]Y_{l}^{m}(\theta,\phi)\Bigg]
+\end{split}
+\end{equation*}
+\begin{equation*}
+\Delta E=E_1\left(\frac{1}{n_{f}^{2}}-\frac{1}{n_{i}^{2}}\right)
+\end{equation*}
+\begin{equation*}
+\frac{1}{\lambda}=R\left(\frac{1}{n_{f}^{2}}-\frac{1}{n_{i}^{2}}\right)
+\end{equation*}
+\begin{equation*}
+P=\int_{0}^{2\pi}\int_{0}^{\pi}\int_{0}^{\infty}\left(f(r)\right)^2r^2\sin^2{(\theta)} \ dr d\theta d\phi
+\end{equation*}
+\begin{equation*}
+\eta=\int_{0}^{2\pi}\int_{0}^{\pi}f(r,\theta,\phi)^*f(r,\theta,\phi) \ \sin{(\theta)}\  d\theta d\phi
+\end{equation*}
+\begin{equation*}
+\mathcal{O}=\int_{0}^{2\pi}\int_{0}^{\pi}f(r,\theta,\phi)^*f(r,\theta,\phi) \sin{(\theta)}\ d\theta d\phi 
+\end{equation*}
+\begin{equation*}
+L=r \ \textbf{x} \ p
+\end{equation*}
+\begin{equation*}
+L_{x}=yP_z-zP_y
+\end{equation*}
+\begin{equation*}
+L_{y}=zP_x-xP_z
+\end{equation*}
+\begin{equation*}
+L_{z}=xP_y-yP_x
+\end{equation*}
+\begin{equation*}
+[L_x,L_y]=i\hbar L_z
+\end{equation*}
+\begin{equation*}
+[L_y,L_z]=i\hbar L_x
+\end{equation*}
+\begin{equation*}
+[L_z,L_x]=i\hbar L_y
+\end{equation*}
+\begin{equation*}
+[L^2,L]=0
+\end{equation*}
+\begin{equation*}
+L_{\pm}=L_x\pm iL_y
+\end{equation*}
+\begin{equation*}
+L^{2}f_{l}^{m}=\hbar^2l(l+1)f_{l}^{m}
+\end{equation*}
+\begin{equation*}
+L_zf_{l}^{m}=\hbar m f_{l}^{m}
+\end{equation*}
+\begin{equation*}
+L_z=\frac{\hbar}{i}\frac{\partial}{\partial \phi}
+\end{equation*}
+\begin{equation*}
+L_{\pm}=\pm\hbar e^{\pm i \phi}\left(\frac{\partial}{\partial \theta} \pm i\cot{\theta}\frac{\partial}{\partial \phi}\right)
+\end{equation*}
+\begin{equation*}
+L^2=-\hbar^2\left[\frac{1}{\sin{\theta}}\frac{\partial}{\partial \theta}\left(\sin{\theta}\frac{\partial}{\partial \theta}\right)+\frac{1}{\sin^2{\theta}}\frac{\partial^2}{\partial \phi^2}\right]
+\end{equation*}
+\begin{equation*}
+[s_x,s_y]=i\hbar s_z
+\end{equation*}
+\begin{equation*}
+[s_y,s_z]=i\hbar s_x
+\end{equation*}
+\begin{equation*}
+[s_z,s_x]=i\hbar s_y
+\end{equation*}
+\begin{equation*}
+S^2=\frac{3}{4}\hbar^2
+\begin{pmatrix}
+1 & 0 \\ 0 & 1
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+S_x=\frac{\hbar}{2}
+\begin{pmatrix}
+0 & 1 \\ 1 & 0
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+S_y=\frac{\hbar}{2}
+\begin{pmatrix}
+0 & -i \\ i & 0
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+S_z=\frac{\hbar}{2}
+\begin{pmatrix}
+1 & 0 \\ 0 & -1
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+\chi=
+\begin{pmatrix}
+a \\ b
+\end{pmatrix}
+=a\chi_++b\chi_-
+\end{equation*}
+\begin{equation*}
+\chi_+=
+\begin{pmatrix}
+1 \\ 0
+\end{pmatrix}
+,\ \lambda=\frac{\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi_-=
+\begin{pmatrix}
+0 \\ 1
+\end{pmatrix}
+,\ \lambda=\frac{-\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi_{+}^{(x)}=\frac{1}{\sqrt{2}}=
+\begin{pmatrix}
+1 \\ 1
+\end{pmatrix}
+,\ \lambda=\frac{\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi_{-}^{(x)}=\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+1 \\ -1
+\end{pmatrix}
+,\ \lambda=\frac{-\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi_{+}^{(y)}=\frac{1}{\sqrt{2}}=
+\begin{pmatrix}
+1 \\ i
+\end{pmatrix}
+,\ \lambda=\frac{\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi_{-}^{(y)}=\frac{1}{\sqrt{2}}=
+\begin{pmatrix}
+1 \\ -i
+\end{pmatrix}
+,\ \lambda=\frac{-\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi_{+}^{(z)}=\frac{1}{\sqrt{2}}=
+\begin{pmatrix}
+1 \\ 0
+\end{pmatrix}
+,\ \lambda=\frac{\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi_{-}^{(z)}=\frac{1}{\sqrt{2}}=
+\begin{pmatrix}
+0 \\ 1
+\end{pmatrix}
+,\ \lambda=\frac{-\hbar}{2}
+\end{equation*}
+\begin{equation*}
+\chi=\left(\frac{a+b}{\sqrt{2}}\right)\chi_{+}^{(i)}+\left(\frac{a-b}{\sqrt{2}}\right)\chi_{-}^{(i)}
+\end{equation*}
+\begin{equation*}
+\chi(t)=
+\begin{pmatrix}
+\cos{(\alpha/2)}e^{i\gamma B_{0}t/2} \\ \sin{(\alpha/2)}e^{-i\gamma B_{0}t/2}
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+<S>=\chi^{*}S\chi
+\end{equation*}
+\begin{equation*}
+\eta=\chi^{*}\chi=1
+\end{equation*}
+\begin{equation*}
+\textbf{H}=-\mu \cdot \textbf{B}=-\gamma \textbf{B} \cdot \textbf{S}
+\end{equation*}
+\begin{equation*}
+P_{\pm}^{(i)}=|C_{\pm}^{(i)}|^2
+\end{equation*}
+\begin{equation*}
+C_{\pm}^{(i)}=\chi_{\pm}^{(i)^{*}}\chi_{\pm}
+\end{equation*}
+\begin{equation*}
+i\hbar\frac{\partial \chi}{\partial t}=H\chi
+\end{equation*}
+\end{multicols}
+%---------------------------------------------------------------------------
+%	Mathematical Equations and Constants
+%---------------------------------------------------------------------------
+\begin{center}
+\underline{\textbf{Mathematical Equations and Constants}}
+\end{center}
+\begin{equation*}
+\int_{0}^{\infty}x^ne^{-x/a}dx=n!a^{n+1},
+\hspace{10pt}
+\int_{0}^{\infty}x^{2n}e^{-x^2/a^x}dx=\sqrt{\pi}\frac{(2n)!}{n!}\left(\frac{a}{2}\right)^{2n+1},
+\hspace{10pt}
+\int_{0}^{\infty}x^{2n+1}e^{-x^2/a^2}dx=\frac{n!}{2}a^{2n+2}
+\end{equation*}
+\begin{equation*}
+\nabla^2=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial f}{\partial r}\right)+\frac{1}{r^2\sin{\theta}}\frac{\partial}{\partial \theta}\left(\sin{\theta}\frac{\partial f}{\partial \theta}\right)+\frac{1}{r^2\sin^2{\theta}}\frac{\partial^2 f}{\partial \phi^2}
+\hspace{10pt}:\hspace{10pt}
+a\ddot{x}+b\dot{x}+x=0, \hspace{10pt} \Delta=b^2-4ac
+\end{equation*}
+\begin{equation*}
+\text{\tiny iff} \ \Delta>0, \hspace{5pt} x(t)=Ae^{r_1t}+Be^{r_2t}: \hspace{10pt}
+\text{\tiny iff} \ \Delta=0, \hspace{5pt} x(t)=Ae^{rt}+Bte^{rt}: \hspace{10pt}
+\text{\tiny iff} \ \Delta<0, \hspace{5pt} x(t)=Ae^{irt}+Be^{-irt}
+\end{equation*}
+\begin{equation*}
+E_1=-13.6 \ \text{ev}, \hspace{5pt}
+R=1.097\cdot10^7 \ \text{m$^{-1}$}, \hspace{5pt}
+\hbar=1.05457\cdot10^{-34} \ \text{Js}, \hspace{5pt}
+c=2.99792\cdot10^8 \ \text{m/s}, \hspace{5pt}
+m_e=9.10938\cdot10^{-31} \ \text{Kg}
+\end{equation*}
+\begin{equation*}
+m_p=1.67262\cdot10^{-27} \ \text{Kg}, \hspace{5pt}
+e_{+,-}=\pm1.67262\cdot10^{-19} \ \text{C}, \hspace{5pt}
+\epsilon_{0}=8.85419\cdot10^{-12} \ \text{C$^2$/Jm}, \hspace{5pt}
+k_{B}=1.38065\cdot10^{-23} \ \text{J/K}
+\end{equation*}
+\begin{equation*}
+[x^2+y,z]=[x^2,z]+[y,z],
+\hspace{5pt}
+[x^2,z]=x[x,z]+[x,z]x,
+\hspace{5pt}
+[A,B]=AB-BA,
+\hspace{5pt}
+[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}
+\hspace{5pt}
+\end{equation*}
+\newpage
+%---------------------------------------------------------------------------
+%	Helpful Hints
+%---------------------------------------------------------------------------
+\begin{center}
+\underline{\textbf{Helpful Hints}}
+\end{center}
+\begin{multicols}{2}
+\begin{equation*}
+\begin{split}
+\text{Discrete Values:} \\
+C_n=&<\Psi_n|\Psi(x,0)|> \\
+\Psi(x,t)=&\sum C_ne^{-iE_nt/\hbar} \\
+<\Psi_m|\Psi_n>=& \ \delta_{mn}
+\end{split}
+\hspace{20pt}
+\begin{split}
+\text{Continuous Values:} \\
+\phi(k)=&<F_{P}^{i}|\Psi(x,t)> \\
+\Psi(x,t)=&<\phi(k)|F_Pe^{-iE_nt/\hbar}> \\
+<F_p|F_p>=& \ \delta(P-P')
+\end{split}
+\end{equation*}
+\end{multicols}
+\begin{itemize}
+\item{Schr\"odingers equation solves for a spinless, nonrelativistic, quantum mechanical system.}
+\item{Discrete values are finite and can be known. i.e Energies.}
+\item{Unbound energies have continuous spectrum of Eigenvalues.}
+\item{Continus values are probabilities. i.e Position and Momentum.}
+\item{Wave functions live in Hilbert Space.}
+\item{Finite inner products indicate that the wave function given lives in Hilbert space.}
+\item{Observables are represented by hermitian operators.}
+\item{Operators in Quantum Mechanics represent physically observable quantities.}
+\item{Determinate States: Every measurement of $\hat{Q}$ returns the same value q.}
+\item{Determinate States are eigenfunctions of $\hat{Q}$.}
+\end{itemize}
+\end{document}
