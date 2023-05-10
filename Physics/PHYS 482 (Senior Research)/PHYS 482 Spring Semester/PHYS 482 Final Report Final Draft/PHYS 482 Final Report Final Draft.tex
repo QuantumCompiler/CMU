@@ -5,6 +5,7 @@
 \usepackage[bottom]{footmisc}
 \usepackage[affil-it]{authblk}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{background}
 \usepackage{braket}
 \usepackage{fancyhdr}
 \usepackage{gensymb}
@@ -29,7 +30,7 @@
 \usetikzlibrary{shapes.geometric, arrows}
 \usepgfplotslibrary{units}
 %---------------------------------------------------------------------------
-%	Header & Footer
+%	Header / Footer / Background
 %---------------------------------------------------------------------------
 \pagestyle{fancy}
 \fancyhead[L]{Taylor Larrechea}
@@ -37,6 +38,14 @@
 \fancyhead[C]{Quantum Parameter Estimation}
 \fancyhead[R]{Colorado Mesa University}
 \fancyfoot[R]{Final Report}
+\backgroundsetup{
+    scale = 1,
+    angle = 0,
+    opacity = 0.1,
+    contents = {
+    \includegraphics[scale = 0.5, keepaspectratio]{Figures/CMU Seal.png}
+    }
+}
 %---------------------------------------------------------------------------
 %	Title and Author
 %---------------------------------------------------------------------------

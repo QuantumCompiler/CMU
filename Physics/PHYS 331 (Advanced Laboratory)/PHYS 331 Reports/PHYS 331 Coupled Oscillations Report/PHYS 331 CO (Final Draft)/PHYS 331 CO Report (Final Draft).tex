@@ -4,6 +4,7 @@
 \documentclass[twocolumn]{article}
 \usepackage[affil-it]{authblk}
 \usepackage{amsmath}
+\usepackage{background}
 \usepackage{fancyhdr}
 \usepackage[bottom]{footmisc}
 \usepackage[left = 1cm ,right = 1cm, top = 2.5cm, bottom = 2.5cm]{geometry}
@@ -29,7 +30,7 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{shapes.geometric, arrows}
 %---------------------------------------------------------------------------
-%	Header and footer
+%	Header / Footer / Background
 %---------------------------------------------------------------------------
 \pagestyle{fancy}
 \fancyhead[L]{Taylor Larrechea}
@@ -37,6 +38,14 @@
 \fancyhead[C]{Coupled Oscillations}
 \fancyhead[R]{Colorado Mesa University}
 \fancyfoot[R]{Final Report}
+\backgroundsetup{
+    scale = 1,
+    angle = 0,
+    opacity = 0.1,
+    contents = {
+    \includegraphics[scale = 0.5, keepaspectratio]{Figures/CMU Seal.png}
+    }
+}
 %---------------------------------------------------------------------------
 %	Title and Author
 %---------------------------------------------------------------------------
