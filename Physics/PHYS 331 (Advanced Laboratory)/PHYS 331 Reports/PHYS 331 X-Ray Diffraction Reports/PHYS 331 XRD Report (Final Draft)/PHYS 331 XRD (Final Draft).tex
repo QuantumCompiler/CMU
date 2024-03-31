@@ -1,46 +1,55 @@
-%%%%%%%%%%%%%%%%%%%%%%%%% Packages
+%---------------------------------------------------------------------------
+%	Packages
+%---------------------------------------------------------------------------
 \documentclass[twocolumn]{article}
-\usepackage[bottom]{footmisc}
 \usepackage[affil-it]{authblk}
 \usepackage{amsmath}
-\usepackage{setspace}
-\usepackage{url}
-\usepackage{amsthm}
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows}
-\usetikzlibrary{decorations.pathreplacing}
-\usetikzlibrary{calc}
-\usepackage{pgfplots}
-\usepgfplotslibrary{units}
-\usepackage{indentfirst}
+\usepackage{background}
+\usepackage{fancyhdr}
+\usepackage[bottom]{footmisc}
+\usepackage[left = 1cm ,right = 1cm, top = 2.5cm, bottom = 2.5cm]{geometry}
 \usepackage{gensymb}
-\pgfplotsset{compat=1.10}
-\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{indentfirst}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{setspace}
 \usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{url}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
 \usetikzlibrary{shapes.geometric, arrows}
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.markings}
-\usepackage{pgfplots}
-\usepackage{pgf}
-\usepackage{fancyhdr}
 \usepgfplotslibrary{units}
 \pgfplotsset{compat=1.10}
-\usepgfplotslibrary{units}
-\usepackage{tkz-euclide}
-\usetkzobj{all}
-\usepackage{xcolor}
-\usepackage{graphicx}
 \usetikzlibrary{arrows.meta}
 \tikzset{>=Stealth}
 \tikzset{snake it/.style={decorate, decoration=snake}}
-%%%%%%%%%%%%%%%%%%%%%%%%% Header and Footer
+%---------------------------------------------------------------------------
+%	Header / Footer / Background
+%---------------------------------------------------------------------------
 \pagestyle{fancy}
-\lhead{\small{X-Ray Diffraction of NaCl and KCl}}
-\chead{\small{T.J Larrechea}}
-\rhead{\small{Colorado Mesa University}}
-%%%%%%%%%%%%%%%%%%%%%%%%% Document Info
-\title{\textbf{Bacon}}
+\fancyhead[L]{Taylor Larrechea}
+\fancyfoot[L]{PHYS 331}
+\fancyhead[C]{X-Ray Diffraction of NaCl and KCl}
+\fancyhead[R]{Colorado Mesa University}
+\fancyfoot[R]{Final Report}
+\backgroundsetup{
+    scale = 1,
+    angle = 0,
+    opacity = 0.1,
+    contents = {
+    \includegraphics[scale = 0.5, keepaspectratio]{Figures/CMU Seal.png}
+    }
+}
+%---------------------------------------------------------------------------
+%	Title And Author
+%---------------------------------------------------------------------------
+\title{\textbf{X-Ray Diffraction Of Table Salt}}
 \author{Taylor Larrechea\footnote{Electronic Address: \texttt{tjlarrechea@mavs.coloradomesa.edu.}} \ and Edward McClain\footnote{Electronic Address: \texttt{epmcclain@mavs.coloradomesa.edu.}} \\
     Colorado Mesa University \\
     Department of Physical and Environmental Sciences \\
@@ -49,60 +58,79 @@
 \date{April 15, 2019}
 \begin{document}
 \maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%% Abstract
+%---------------------------------------------------------------------------
+%	Abstract
+%---------------------------------------------------------------------------
 \begin{abstract}
 Table salt and potassium chloride are examined via X-Ray Diffraction to determine the lattice spacing. The lattice spacing of the table salt and potassium chloride sample was calculated by measuring the angle of Diffraction from X-Rays. The experiment produced a lattice constant for table salt of $a=0.567(1)$ nm. The lattice constant for potassium chloride was found to be $a=0.524(3)$ nm. 
 \end{abstract}
-%%%%%%%%%%%%%%%%%%%%%%%%% Background
+%---------------------------------------------------------------------------
+%	Background
+%---------------------------------------------------------------------------
 \section*{Background}
 X-Ray Diffraction is primarily used in identifying unknown crystalline structures such as minerals or inorganic compounds \cite{XRDDiffrac}. The identification of unknown solids is useful in geology, environmental science, and material science \cite{Qian}. The simplest structure is a simple cubic lattice, commonly found in materials such as table salt and potassium chloride. Figure 1 shows the simple cubic structure of table salt \cite{Ou}.
-%%%%%%%%%%%%%%%%%%%%%%%%% Figure 1
+%---------------------------------------------------------------------------
+%	Figure 1
+%---------------------------------------------------------------------------
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report Simple Cubic Rock Salt".png}
+\includegraphics[width=0.35\textwidth]{Figures/PHYS 331 XRD Report Simple Cubic Rock Salt.png}
 \caption{The simple cubic structure of table salt \cite{Ou}.}
 \label{Fig1}
 \end{center}
 \end{figure}
 \newpage
 The side lengths in Figure 1 are all of the same length and orthogonal to one another hence the simple cubic name. Figure 2 shows the Diffraction of an X-Ray that is entering a crystalline structure such as table salt or sodium chloride.
-%%%%%%%%%%%%%%%%%%%%%%%%% Figure 2
+%---------------------------------------------------------------------------
+%	Figure 2
+%---------------------------------------------------------------------------
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report XRD".png}
+\includegraphics[width=0.35\textwidth]{Figures/PHYS 331 XRD Report XRD.png}
 \caption{The X-Ray Diffraction inside a crystalline structure \cite{X-RayCryst}. The distance between atom planes is \textit{d}.}
 \label{Fig2}
 \end{center}
 \end{figure}
-\newpage
 Figure 2 shows the X-Ray Diffraction distance once they enter a crystalline structure. This distance is contingent upon the angle of diffraction ($\theta$ as seen in Figure 2 above), the wavelength of the light $\lambda$, and the order of magnitude of the wavelength of light $n$. This distance occurs in Bragg's law and is formally
-%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 1
+%---------------------------------------------------------------------------
+%	Equation 1
+%---------------------------------------------------------------------------
 \begin{equation}\label{1}
 2d\sin{\theta}=n\lambda
 \end{equation}
 where $d$ is the distance between lattice planes. In order to calculate the lattice constant of table salt and potassium chloride in this experiment we need to know the Miller indices\footnote{Miller indices are usually represented in a form of (\textit{h},\textit{k},\textit{l}). The \textit{h}, \textit{k}, and \textit{l} can vary in different letters and symbols depending on the author of the report or article.} for both. The Miller indices of a substance are the inverse of the intercepts of the of the plane of a substance with the a unit cell \cite{WikiCrystal}. A visual representation of Miller indices can be seen in Figure 3.
-%%%%%%%%%%%%%%%%%%%%%%%%%  Figure 3
+%---------------------------------------------------------------------------
+%	Figure 3
+%---------------------------------------------------------------------------
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.35\textwidth]{"PHYS 331 XRD Report Miller Indices".png}
+\includegraphics[width=0.35\textwidth]{Figures/PHYS 331 XRD Report Miller Indices.png}
 \caption{Physical representation of the numbers seen in a Miller index \cite{WikiCrystal}.}
 \label{Fig3}
 \end{center}
 \end{figure}
 \newpage
 The Miller indices come from which plane of the simple cubic is being intercepted. After knowing the Miller indices of table salt and potassium chlordie we can proceed to calculating the lattice constant. In compliance with equation (1), the lattice constant is calculated via
-%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 2
+%---------------------------------------------------------------------------
+%	Equation 2
+%---------------------------------------------------------------------------
 \begin{equation}\label{2}
 a=d\sqrt{h^2+k^2+l^2}
 \end{equation}
 where \textit{h}, \textit{k}, and \textit{l} are contingent upon the geometry of the substance that is being observed \cite{X-RayCryst}. The $d$ distance in equation (1) could be calculated once $n$ was set equal to one since the $\theta$ value could be measured with the instrumentation.
-%%%%%%%%%%%%%%%%%%%%%%%%% Experimental
+%---------------------------------------------------------------------------
+%	Experimental
+%---------------------------------------------------------------------------
 \section*{Experimental}
 X-Ray Diffraction patterns were acquired using a Rigaku Miniflex diffractometer equipped with a copper k-$\alpha$ source with a wavelength of $\lambda=0.1544256$ nm and a glass slide to hold the Kroger brand non-iodized table salt or potassium chloride sample. The first step was to place the sample on the glass slide with ethanol sprayed on top and then placed inside the Rigaku Miniflex. After the slide was inserted and other settings were selected the Rigaku Miniflex started generating X-Rays that were to be incident on the table salt and potassium chloride sample. The detector inside the Rigaku Minflex measured the deflection angle of these X-Rays in a form of 2$\theta$. 
-%%%%%%%%%%%%%%%%%%%%%%%%% Data and Results
+%---------------------------------------------------------------------------
+%	Data And Results
+%---------------------------------------------------------------------------
 \section*{Data and Results}
 The Diffraction pattern of the table salt sample with the corresponding Miller indices for each Diffraction peak can be seen in Figure 4 \cite{Lecture}.
-%%%%%%%%%%%%%%%%%%%%%%%%% Figure 4
+%---------------------------------------------------------------------------
+%	Figure 4
+%---------------------------------------------------------------------------
 \begin{figure}[htbp]
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
@@ -130,18 +158,20 @@ The Diffraction pattern of the table salt sample with the corresponding Miller i
 \end{figure}
 \newline
 Figure 4 shows the intensity versus the $2\theta$ angle of diffraction for the table salt sample. There are seven distinct peaks from left to right that are created during this phenomena which will be used to calculate the diffraction distance and eventually the lattice constant. These peaks then had their angles of which they occurred at extracted and used to find a distance for the lattice spacing between respective atom planes of the table salt sample. Once $d$ in equation (1) was known it could be used with the correct Miller index of the respective peak to determine the lattice constant of table salt. Table 1 shows the data found in Figure 4. The abbreviation, ``M.I." is short for Miller index in the following tables.
-%%%%%%%%%%%%%%%%%%%%%%%%% Table 1
+%---------------------------------------------------------------------------
+%	Table 1
+%---------------------------------------------------------------------------
 \begin{table}[htp]
 \begin{center}
 \begin{tabular}{|c|c|c|}
 	\hline \small{\textbf{Peak \& M.I.}} & \small{\textbf{Angle $2\theta$ ($^{\circ}$)}} & \small{\textbf{Intensity (A.U.)}} \\ \hline
-	 (111)& $27.35\pm0.00$ & $126.7\pm4.850$ \\ \hline
-	 (200)& $31.39\pm0.00$ & $303.7\pm13.74$ \\ \hline
-	 (220)& $45.39\pm0.00$ & $654.9\pm9.580$ \\ \hline
-	 (311)& $53.80\pm0.00$ & $37.20\pm3.260$ \\ \hline
-	 (222)& $56.39\pm0.00$ & $471.4\pm8.170$ \\ \hline
-	 (400)& $65.98\pm0.00$ & $284.1\pm6.610$ \\ \hline
-	 (420)& $75.15\pm0.00$ & $475.9\pm8.390$ \\ \hline 
+    (111)& $27.35\pm0.00$ & $126.7\pm4.850$ \\ \hline
+    (200)& $31.39\pm0.00$ & $303.7\pm13.74$ \\ \hline
+    (220)& $45.39\pm0.00$ & $654.9\pm9.580$ \\ \hline
+    (311)& $53.80\pm0.00$ & $37.20\pm3.260$ \\ \hline
+    (222)& $56.39\pm0.00$ & $471.4\pm8.170$ \\ \hline
+    (400)& $65.98\pm0.00$ & $284.1\pm6.610$ \\ \hline
+    (420)& $75.15\pm0.00$ & $475.9\pm8.390$ \\ \hline 
 \end{tabular}
 \caption{Data for X-Ray Diffraction of table salt. The Miller Indices were unknown for peaks 5-7.}
 \end{center}
@@ -149,7 +179,9 @@ Figure 4 shows the intensity versus the $2\theta$ angle of diffraction for the t
 \end{table}%
 \newline
 The data seen in Table 1 above was analyzed with a peak fitting software called Fityk using Gaussian peaks \cite{Fityk}. Using equation (2), the lattice constant of table salt can be calculated with the data found in Table 1. The lattice constant calculations can be seen in Table 2.
-%%%%%%%%%%%%%%%%%%%%%%%%% Table 2
+%---------------------------------------------------------------------------
+%	Table 2
+%---------------------------------------------------------------------------
 \begin{table}[htp]
 \begin{center}
 \begin{tabular}{|c|c|c|}
@@ -168,12 +200,16 @@ The data seen in Table 1 above was analyzed with a peak fitting software called 
 \end{table}%
 \newline
 Taking an average and finding the standard deviation of the lattice constants found in Table 2, the final calculated lattice constant for table salt from this experiment is
-%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 3
+%---------------------------------------------------------------------------
+%	Equation 3
+%---------------------------------------------------------------------------
 \begin{equation}
 a_{NaCl}=0.567(1) \ nm.
 \end{equation}
 The formal value for the lattice constant of sodium chloride is $a=0.564$ nm \cite{WikiLattice}. This reveals that our value is slightly out of range due to a calibration error in the equipment that was being used. The same procedure was ran for potassium chloride that was used for table salt. The X-Ray Diffraction pattern of potassium chloride and the correct corresponding Miller indices of each peak can be seen in Figure 5 \cite{Lin}.
-%%%%%%%%%%%%%%%%%%%%%%%%% Figure 5
+%---------------------------------------------------------------------------
+%	Figure 5
+%---------------------------------------------------------------------------
 \begin{figure}[htbp]
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
@@ -200,7 +236,9 @@ The formal value for the lattice constant of sodium chloride is $a=0.564$ nm \ci
 \end{figure}
 \newline
 There are six distinct peaks that arise from the X-Ray Diffraction of potassium chloride. Using the data and the Miller indices in Figure 5, Table 3 is constructed to relay the X-Ray Diffraction for potassium chloride.
-%%%%%%%%%%%%%%%%%%%%%%%%% Table 3
+%---------------------------------------------------------------------------
+%	Table 3
+%---------------------------------------------------------------------------
 \begin{table}[htp]
 \begin{center}
 \begin{tabular}{|c|c|c|}
@@ -218,7 +256,9 @@ There are six distinct peaks that arise from the X-Ray Diffraction of potassium 
 \end{table}%
 \newline
 Using the same procedure that was used for table salt the lattice spacing of potassium chloride can be seen in Table 4.
-%%%%%%%%%%%%%%%%%%%%%%%%% Table 4
+%---------------------------------------------------------------------------
+%	Table 4
+%---------------------------------------------------------------------------
 \begin{table}[htp]
 \begin{center}
 \begin{tabular}{|c|c|c|}
@@ -236,15 +276,21 @@ Using the same procedure that was used for table salt the lattice spacing of pot
 \end{table}%
 \newline
 Taking the averages of the lattice constants found in Table 4, our final value for the lattice constant of potassium chloride is
-%%%%%%%%%%%%%%%%%%%%%%%%% Eq. 4
+%---------------------------------------------------------------------------
+%	Equation 4
+%---------------------------------------------------------------------------
 \begin{equation}
 a_{KCl}=0.624(3) \ nm.
 \end{equation}
 The formal value for the lattice constant of potassium chloride is $a=0.629$ nm \cite{WikiLattice}. This once again shows that our equipment is in need of calibrating.
-%%%%%%%%%%%%%%%%%%%%%%%%% Conclusion
+%---------------------------------------------------------------------------
+%	Conclusion
+%---------------------------------------------------------------------------
 \section*{Conclusion}
 In this experiment X-Ray Diffraction was used to find the lattice constant of table salt and potassium chloride. The lattice constant for table salt was calculated to be $a_{NaCl}=0.567(1)$ nm where the formal value is $a=0.564$ nm \cite{WikiLattice}. This discrepancy is largely in part due to equipment needing to be calibrated. The same procedure was conducted on potassium chloride and the lattice constant was found to be $a_{KCl}=0.624(3)$ nm where the formal value is  $a=0.629$ nm \cite{WikiLattice}. The lattice constant for potassium chloride is also outside the range of the formal value once again caused due to a lack of calibration in the equipment. More accurate calculations of the lattice constants could be achieved with better calibrated equipment. For further investigations of X-Ray Diffraction see references [1]-[13].
-%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography
+%---------------------------------------------------------------------------
+%	Bibliography
+%---------------------------------------------------------------------------
 \newpage
 \begin{thebibliography}{13}
 \bibitem{WikiBraggs}
